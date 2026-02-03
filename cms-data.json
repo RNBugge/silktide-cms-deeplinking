@@ -1,0 +1,511 @@
+[
+  {
+    "slug": "wordpress",
+    "name": "WordPress",
+    "category": "Open-source CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8117667-how-to-integrate-silktide-with-wordpress",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Silktide provides a built-in integration for deep-linking (Edit button).",
+    "guide_path": "guides/wordpress.md"
+  },
+  {
+    "slug": "drupal",
+    "name": "Drupal (7–11)",
+    "category": "Open-source CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8020843-how-to-integrate-silktide-with-drupal-8",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Silktide supports Drupal 7–11 via built-in integration guides.",
+    "guide_path": "guides/drupal.md"
+  },
+  {
+    "slug": "aem",
+    "name": "Adobe Experience Manager (AEM)",
+    "category": "Enterprise DXP",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8020840-how-to-integrate-silktide-with-adobe-experience-manager-aem",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Built-in AEM integration.",
+    "guide_path": "guides/aem.md"
+  },
+  {
+    "slug": "umbraco",
+    "name": "Umbraco",
+    "category": "Open-source/.NET CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8020841-how-to-integrate-silktide-with-umbraco",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Built-in Umbraco integration.",
+    "guide_path": "guides/umbraco.md"
+  },
+  {
+    "slug": "sitefinity",
+    "name": "Progress Sitefinity",
+    "category": "Enterprise CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8020844-how-to-integrate-silktide-with-sitefinity",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Built-in Sitefinity integration.",
+    "guide_path": "guides/sitefinity.md"
+  },
+  {
+    "slug": "craftcms",
+    "name": "Craft CMS",
+    "category": "CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8020842-how-to-integrate-silktide-with-craft-cms-3",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Built-in Craft CMS integration (guide references Craft CMS 3).",
+    "guide_path": "guides/craftcms.md"
+  },
+  {
+    "slug": "terminalfour",
+    "name": "Terminalfour",
+    "category": "Enterprise / Higher-Ed CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8170116-how-to-integrate-silktide-with-terminalfour",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Built-in Terminalfour integration.",
+    "guide_path": "guides/terminalfour.md"
+  },
+  {
+    "slug": "jadu",
+    "name": "Jadu",
+    "category": "Public sector CMS",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8020846-how-to-integrate-silktide-with-jadu",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Built-in Jadu integration.",
+    "guide_path": "guides/jadu.md"
+  },
+  {
+    "slug": "typo3",
+    "name": "TYPO3",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "hook_or_extension",
+    "notes": "TYPO3 backend deep links include internal page uid and often a security token/route; public URL alone isn’t enough. Use meta tag built from page uid + backend route.",
+    "guide_path": "guides/typo3.md"
+  },
+  {
+    "slug": "joomla",
+    "name": "Joomla",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "plugin",
+    "notes": "Use a per-page silktide-cms meta tag to provide the exact editor URL for each page.",
+    "guide_path": "guides/joomla.md"
+  },
+  {
+    "slug": "shopify",
+    "name": "Shopify",
+    "category": "Ecommerce (SaaS)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Admin URLs are ID-based; in Liquid you can access object.id for products/pages/blog posts and build the editorUrl meta tag.",
+    "guide_path": "guides/shopify.md"
+  },
+  {
+    "slug": "magento",
+    "name": "Adobe Commerce (Magento)",
+    "category": "Ecommerce",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "module_event",
+    "notes": "Admin edit screens use entity IDs and often require an authenticated session; do not include tokens in editor URLs. Use meta tag with non-tokenized edit URL.",
+    "guide_path": "guides/magento.md"
+  },
+  {
+    "slug": "bigcommerce",
+    "name": "BigCommerce",
+    "category": "Ecommerce (SaaS)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Admin edit screens are ID-based. Use storefront templates to emit meta tag if you can access product/page IDs; otherwise rely on URL transform is not recommended.",
+    "guide_path": "guides/bigcommerce.md"
+  },
+  {
+    "slug": "webflow",
+    "name": "Webflow",
+    "category": "Website builder",
+    "silktide_support": "custom",
+    "edit_link_strategy": "not_feasible",
+    "retest_strategy": "webhook",
+    "notes": "Webflow editing URLs are not reliably derivable from public URLs without internal IDs; deep linking to a specific page is typically not feasible.",
+    "guide_path": "guides/webflow.md"
+  },
+  {
+    "slug": "wix",
+    "name": "Wix",
+    "category": "Website builder",
+    "silktide_support": "custom",
+    "edit_link_strategy": "not_feasible",
+    "retest_strategy": "limited",
+    "notes": "Deep linking to edit a specific page is generally not feasible; Wix uses editor/session context. Consider linking to the site dashboard only, or skip edit links.",
+    "guide_path": "guides/wix.md"
+  },
+  {
+    "slug": "squarespace",
+    "name": "Squarespace",
+    "category": "Website builder",
+    "silktide_support": "custom",
+    "edit_link_strategy": "not_feasible",
+    "retest_strategy": "limited",
+    "notes": "Page-specific edit deep links are generally not feasible; editor URLs are not stable per page. Consider linking to the site dashboard only, or skip edit links.",
+    "guide_path": "guides/squarespace.md"
+  },
+  {
+    "slug": "hubspot",
+    "name": "HubSpot CMS",
+    "category": "SaaS CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "HubSpot editor URLs include portal ID and content ID. If your templates can access these IDs, emit meta tag; otherwise edit deep links may be limited.",
+    "guide_path": "guides/hubspot.md"
+  },
+  {
+    "slug": "sitecore",
+    "name": "Sitecore",
+    "category": "Enterprise DXP",
+    "silktide_support": "custom",
+    "edit_link_strategy": "url_transform",
+    "retest_strategy": "event_handler",
+    "notes": "Many Sitecore sites support Experience Editor via predictable URL changes (e.g., query params like sc_mode=edit and/or host swap). If your setup requires item IDs, use the meta tag strategy.",
+    "guide_path": "guides/sitecore.md"
+  },
+  {
+    "slug": "optimizely",
+    "name": "Optimizely CMS",
+    "category": "Enterprise CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "depends",
+    "retest_strategy": "event_handler",
+    "notes": "Optimizely supports on-page editing; some implementations use epieditmode=True on specific CMS URLs (often includes internal IDs). Treat as meta tag by default, but URL transform may work if your preview URLs are deterministic.",
+    "guide_path": "guides/optimizely.md"
+  },
+  {
+    "slug": "kentico",
+    "name": "Kentico Xperience",
+    "category": "Enterprise CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "depends",
+    "retest_strategy": "event_handler",
+    "notes": "Often requires internal identifiers (NodeID/DocumentID). If on-site editing is enabled, some setups allow an edit-mode URL derived from the public path (e.g., /cmsctx/... + editmode=1). Otherwise use meta tag built from CMS IDs.",
+    "guide_path": "guides/kentico.md"
+  },
+  {
+    "slug": "sharepoint",
+    "name": "SharePoint Online",
+    "category": "Intranet / DXP",
+    "silktide_support": "custom",
+    "edit_link_strategy": "url_transform",
+    "retest_strategy": "power_automate_or_webhook",
+    "notes": "Some SharePoint Online pages can be opened in edit mode via predictable URL parameters (varies by tenant/page type). If not, fall back to meta tag with internal IDs or link to the site’s Pages/Library UI.",
+    "guide_path": "guides/sharepoint.md"
+  },
+  {
+    "slug": "liferay",
+    "name": "Liferay DXP",
+    "category": "Enterprise DXP",
+    "silktide_support": "custom",
+    "edit_link_strategy": "url_transform",
+    "retest_strategy": "event_handler",
+    "notes": "Liferay pages can be opened in edit mode by adding p_l_mode=edit to the page URL (requires permissions).",
+    "guide_path": "guides/liferay.md"
+  },
+  {
+    "slug": "magnolia",
+    "name": "Magnolia",
+    "category": "Enterprise CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Typically edited via AdminCentral/Pages app and internal node paths/UUIDs; no universal 1:1 URL transform from public URL. Use meta tag built from Magnolia page node info.",
+    "guide_path": "guides/magnolia.md"
+  },
+  {
+    "slug": "contentful",
+    "name": "Contentful",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Headless: frontend can emit meta tag with the entry ID and a preconfigured space/environment.",
+    "guide_path": "guides/contentful.md"
+  },
+  {
+    "slug": "sanity",
+    "name": "Sanity",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Headless: emit meta tag with document ID and studio URL (often uses intents).",
+    "guide_path": "guides/sanity.md"
+  },
+  {
+    "slug": "prismic",
+    "name": "Prismic",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Headless: emit meta tag with document ID/UID and repository name.",
+    "guide_path": "guides/prismic.md"
+  },
+  {
+    "slug": "storyblok",
+    "name": "Storyblok",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Headless: emit meta tag with story ID and space ID, pointing into the Visual Editor.",
+    "guide_path": "guides/storyblok.md"
+  },
+  {
+    "slug": "strapi",
+    "name": "Strapi",
+    "category": "Headless CMS (self-hosted)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "lifecycle_hook",
+    "notes": "Emit meta tag with collection type + entry ID and Strapi admin URL.",
+    "guide_path": "guides/strapi.md"
+  },
+  {
+    "slug": "contentstack",
+    "name": "Contentstack",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Use a per-page silktide-cms meta tag to provide the exact editor URL for each page.",
+    "guide_path": "guides/contentstack.md"
+  },
+  {
+    "slug": "ghost",
+    "name": "Ghost",
+    "category": "CMS (Publishing)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "url_transform",
+    "retest_strategy": "webhook",
+    "notes": "Ghost supports a front-end “/edit” shortcut: append /edit to the public post/page URL to redirect to the editor (login required).",
+    "guide_path": "guides/ghost.md"
+  },
+  {
+    "slug": "woocommerce",
+    "name": "WooCommerce",
+    "category": "Ecommerce (WordPress plugin)",
+    "silktide_support": "built_in",
+    "silktide_help_url": "https://help.silktide.com/en/articles/8117667-how-to-integrate-silktide-with-wordpress",
+    "edit_link_strategy": "built_in",
+    "retest_strategy": "built_in",
+    "notes": "Silktide provides a built-in integration for deep-linking (Edit button).",
+    "guide_path": "guides/woocommerce.md"
+  },
+  {
+    "slug": "prestashop",
+    "name": "PrestaShop",
+    "category": "Open-source ecommerce",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Admin edit URLs typically require internal IDs (product/category/CMS page).",
+    "guide_path": "guides/prestashop.md"
+  },
+  {
+    "slug": "shopware",
+    "name": "Shopware",
+    "category": "Ecommerce platform",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Admin edit URLs usually include entity IDs; public slugs aren’t enough.",
+    "guide_path": "guides/shopware.md"
+  },
+  {
+    "slug": "plone",
+    "name": "Plone",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "url_transform",
+    "retest_strategy": "event_handler",
+    "notes": "Plone supports action URLs like /edit on the same content URL, so editorUrl can be derived from the public URL.",
+    "guide_path": "guides/plone.md"
+  },
+  {
+    "slug": "django_cms",
+    "name": "django CMS",
+    "category": "Open-source CMS framework (Python/Django)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "url_transform",
+    "retest_strategy": "event_handler",
+    "notes": "Many setups allow entering edit mode by appending ?edit to the current page URL (logged-in editors).",
+    "guide_path": "guides/django_cms.md"
+  },
+  {
+    "slug": "modx",
+    "name": "MODX",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Manager edit URLs are resource-ID based; public slugs don’t reliably include IDs.",
+    "guide_path": "guides/modx.md"
+  },
+  {
+    "slug": "silverstripe",
+    "name": "Silverstripe CMS",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Admin edit routes are ID-based (pages/records).",
+    "guide_path": "guides/silverstripe.md"
+  },
+  {
+    "slug": "concretecms",
+    "name": "Concrete CMS (Concrete5)",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "depends",
+    "retest_strategy": "event_handler",
+    "notes": "Some sites use on-page editing (same URL for editors), others route through dashboard pages with cID. If you can reliably derive edit mode from public URL, use transform; otherwise meta tag with page ID.",
+    "guide_path": "guides/concretecms.md"
+  },
+  {
+    "slug": "processwire",
+    "name": "ProcessWire",
+    "category": "Open-source CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Admin edit URLs require the page ID; public URL is path-based.",
+    "guide_path": "guides/processwire.md"
+  },
+  {
+    "slug": "octobercms",
+    "name": "October CMS",
+    "category": "CMS (Laravel/PHP)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Back-end editing is record-ID based and front-end URLs are developer-defined.",
+    "guide_path": "guides/octobercms.md"
+  },
+  {
+    "slug": "statamic",
+    "name": "Statamic",
+    "category": "CMS (Laravel, flat-file)",
+    "silktide_support": "custom",
+    "edit_link_strategy": "depends",
+    "retest_strategy": "event_handler",
+    "notes": "Entry editing URLs in the Control Panel depend on collection/blueprint structure. If your public paths map cleanly to CP entry routes, use transform; otherwise generate editorUrl in meta tag from entry identifiers.",
+    "guide_path": "guides/statamic.md"
+  },
+  {
+    "slug": "directus",
+    "name": "Directus",
+    "category": "Headless CMS / data platform",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Editor UI is collection + item-ID based; public URLs are app-specific.",
+    "guide_path": "guides/directus.md"
+  },
+  {
+    "slug": "datocms",
+    "name": "DatoCMS",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Editor URLs are model/item-ID based and not derivable from public slugs.",
+    "guide_path": "guides/datocms.md"
+  },
+  {
+    "slug": "kontent_ai",
+    "name": "Kontent.ai",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Editor URLs use internal item IDs/codenames; public URL mapping is custom.",
+    "guide_path": "guides/kontent_ai.md"
+  },
+  {
+    "slug": "hygraph",
+    "name": "Hygraph (GraphCMS)",
+    "category": "Headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Editor is model + entry-ID based; public URLs are app-defined.",
+    "guide_path": "guides/hygraph.md"
+  },
+  {
+    "slug": "builderio",
+    "name": "Builder.io",
+    "category": "Visual headless CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Editing happens inside Builder with content IDs/spaces; public URLs are typically mapped via model/URL fields.",
+    "guide_path": "guides/builderio.md"
+  },
+  {
+    "slug": "brightspot",
+    "name": "Brightspot",
+    "category": "Enterprise CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Authoring is ID-based and implementation-specific; public URLs don’t reliably encode item IDs.",
+    "guide_path": "guides/brightspot.md"
+  },
+  {
+    "slug": "crownpeak",
+    "name": "Crownpeak",
+    "category": "Enterprise DX / CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "webhook",
+    "notes": "Authoring UI uses internal asset IDs; public URL mapping varies.",
+    "guide_path": "guides/crownpeak.md"
+  },
+  {
+    "slug": "tridion_sites",
+    "name": "Tridion Sites (SDL Tridion)",
+    "category": "Enterprise CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Editing is ID-based (items/components/pages) and not derivable from public URLs.",
+    "guide_path": "guides/tridion_sites.md"
+  },
+  {
+    "slug": "hcl_dx",
+    "name": "HCL Digital Experience (DX)",
+    "category": "Enterprise portal / DXP",
+    "silktide_support": "custom",
+    "edit_link_strategy": "depends",
+    "retest_strategy": "event_handler",
+    "notes": "Some deployments support in-context editing on the live URL; others require control panel routes with internal IDs. If edit mode can be enabled via URL parameters, use transform; otherwise generate editorUrl via meta tag using internal IDs.",
+    "guide_path": "guides/hcl_dx.md"
+  }
+]

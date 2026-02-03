@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Silktide CMS Deep-Link Playbook</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Silktide CMS Deep-Link Playbook</h1>
+      <p class="sub">A practical CMS matrix for deciding how to enable Silktide’s Edit deep links and producing ready-to-share templates.</p>
+
+      <div class="controls">
+        <input id="q" class="input" placeholder="Search CMS (e.g., TYPO3, Shopify, Sitecore)" />
+        <select id="filterSupport" class="select">
+          <option value="">All support types</option>
+          <option value="built_in">Built-in (Silktide)</option>
+          <option value="custom">Custom (customer-built)</option>
+        </select>
+        <select id="filterEdit" class="select">
+          <option value="">All edit-link strategies</option>
+          <option value="built_in">Built-in</option>
+          <option value="url_transform">URL transform</option>
+          <option value="meta_tag">Meta tag</option>
+          <option value="depends">Depends</option>
+          <option value="not_feasible">Not feasible</option>
+        </select>
+      </div>
+
+      <div class="legend">
+        <span class="pill built_in">Built-in</span>
+        <span class="pill url_transform">URL transform</span>
+        <span class="pill meta_tag">Meta tag</span>
+        <span class="pill depends">Depends</span>
+        <span class="pill not_feasible">Not feasible</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="list">
+      <div id="list" class="cards"></div>
+    </section>
+
+    <section class="detail">
+      <div class="detailHeader">
+        <div>
+          <h2 id="detailTitle">Select a CMS</h2>
+          <div id="detailMeta" class="meta"></div>
+        </div>
+
+        <div class="detailActions">
+          <button id="copyMd" class="button" disabled>Copy template (Markdown)</button>
+          <a id="openGuide" class="button secondary" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Open guide file</a>
+        </div>
+      </div>
+
+      <article id="detailBody" class="markdown">
+        <p class="muted">Pick a CMS on the left to view the integration template.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="muted">
+        Tip: This site is static. Deploy it on Netlify/Vercel/GitHub Pages or run <code>python -m http.server</code> locally to avoid fetch restrictions.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
