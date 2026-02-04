@@ -27,13 +27,6 @@ Then open: `http://localhost:8000`
 npx serve .
 ```
 
-## How to deploy
-
-This is a static site — you can deploy to:
-- Netlify (drag-and-drop the folder)
-- Vercel (static)
-- GitHub Pages (commit the folder and serve it)
-
 ## Editing the “database”
 
 Update `cms-data.json`.
