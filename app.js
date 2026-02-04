@@ -133,29 +133,37 @@ function renderList(){
     card.addEventListener("click", () => selectCMS(c));
     list.appendChild(card);
   });
+
+  positionDetailPanel();
 }
 
-async function selectCMS(c){
-  const detailPanel = document.querySelector(".detail");
-  if(active && active.slug === c.slug){
-    active = null;
+function positionDetailPanel(){
+  const detail = document.querySelector(".detail");
+  const list = document.querySelector(".cards");
+  if(!detail || !list) return;
+  const activeCard = document.querySelector(".card.active");
+  if(!activeCard){
+    detail.style.marginTop = "0px";
+    return;
+  }
+  const listRect = list.getBoundingClientRect();
+  const cardRect = activeCard.getBoundingClientRect();
+  const offset = Math.max(0, Math.round(cardRect.top - listRect.top));
+  detail.style.marginTop = `${offset}px`;
+}
+
+function setDetailContent(c){
+  if(!c){
     activeMarkdown = "";
     $("detailTitle").textContent = "Select a CMS";
     $("detailMeta").innerHTML = "";
     $("detailBody").innerHTML = `<p class="muted">Pick a CMS on the left to view integration details.</p>`;
     $("copyMd").disabled = true;
     $("copyJson").disabled = true;
-    if(detailPanel) detailPanel.classList.remove("is-open");
-    renderList();
     return;
   }
 
-  active = c;
-  renderList();
-
   const editStrategy = c.edit_link_strategy || "not_feasible";
-  const editorText = editorContextText(c.editor_context);
-
   $("detailTitle").textContent = c.name;
   $("detailMeta").innerHTML = `
     <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
@@ -166,12 +174,34 @@ async function selectCMS(c){
   activeMarkdown = template;
   $("copyMd").disabled = false;
   $("copyJson").disabled = false;
-
   $("detailBody").innerHTML = renderMarkdown(template);
-  if(detailPanel){
-    detailPanel.classList.remove("is-open");
-    void detailPanel.offsetWidth;
-    detailPanel.classList.add("is-open");
+}
+
+async function selectCMS(c){
+  const panel = document.querySelector(".detail");
+  const isSame = active && active.slug === c.slug;
+
+  if(isSame){
+    if(panel) panel.classList.remove("is-open");
+    active = null;
+    renderList();
+    setTimeout(() => {
+      setDetailContent(null);
+    }, 200);
+    return;
+  }
+
+  active = c;
+  renderList();
+  if(panel){
+    panel.classList.remove("is-open");
+    setTimeout(() => {
+      setDetailContent(c);
+      panel.classList.add("is-open");
+      positionDetailPanel();
+    }, 200);
+  }else{
+    setDetailContent(c);
   }
 }
 
@@ -179,6 +209,10 @@ function bind(){
   ["q","filterSupport","filterEdit"].forEach(id => {
     $(id).addEventListener("input", renderList);
     $(id).addEventListener("change", renderList);
+  });
+
+  window.addEventListener("resize", () => {
+    positionDetailPanel();
   });
 
   const themeBtn = $("themeToggle");
@@ -212,6 +246,7 @@ async function init(){
   });
   const res = await fetch("cms-data.json", {cache:"no-store"});
   CMS = await res.json();
+  setDetailContent(null);
   bind();
   renderList();
 }

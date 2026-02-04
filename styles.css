@@ -135,7 +135,18 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
   background:linear-gradient(160deg,var(--surface),var(--surface-3));
   padding:18px;
   box-shadow:var(--shadow);
-  align-self:start;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  max-height:0;
+  opacity:0;
+  transform:translateY(8px);
+  overflow:hidden;
+  transition:max-height .28s ease, opacity .2s ease, transform .2s ease;
+}
+.detail.is-open{
+  max-height:4000px;
+  opacity:1;
+  transform:translateY(0);
 }
 .detailHeader{
   display:flex;
@@ -196,15 +207,3 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .markdown pre code{background:transparent;padding:0}
 html[data-theme="dark"] .markdown pre{background:#0b1426}
 .footer{padding:18px 0}
-#detailBody{
-  max-height:0;
-  opacity:0;
-  transform:translateY(8px);
-  overflow:hidden;
-  transition:max-height .28s ease, opacity .2s ease, transform .2s ease;
-}
-.detail.is-open #detailBody{
-  max-height:9999px;
-  opacity:1;
-  transform:translateY(0);
-}
