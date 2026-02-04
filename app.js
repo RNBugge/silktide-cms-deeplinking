@@ -10,6 +10,19 @@ function labelize(value){
   return value.replaceAll("_"," ").replaceAll("-", " ");
 }
 
+function editorContextText(value){
+  if(!value) return "";
+  if(typeof value === "string") return value;
+  if(typeof value === "object"){
+    const parts = [];
+    if(value.strategy) parts.push(`Strategy: ${labelize(value.strategy)}`);
+    if(value.silktide_support) parts.push(`Support: ${labelize(value.silktide_support)}`);
+    if(value.primary_docs) parts.push(`Docs: ${value.primary_docs}`);
+    return parts.join(" • ") || JSON.stringify(value);
+  }
+  return String(value);
+}
+
 function buildSummary(c){
   return [
     `# ${c.name}`,
@@ -20,7 +33,7 @@ function buildSummary(c){
     `Retest strategy: ${labelize(c.retest_strategy)}`,
     ``,
     `Editor context:`,
-    `${c.editor_context || "Not specified"}`,
+    `${editorContextText(c.editor_context) || "Not specified"}`,
     ``,
     `Notes:`,
     `${c.notes || "Not specified"}`,
@@ -76,18 +89,20 @@ function renderList(){
   }
 
   filtered.forEach(c => {
+    const editStrategy = c.edit_link_strategy || "not_feasible";
     const card = document.createElement("div");
     card.className = "card" + (active && active.slug === c.slug ? " active" : "");
-    const tooltip = c.editor_context || c.notes || "";
+    const editorText = editorContextText(c.editor_context);
+    const tooltip = editorText || c.notes || "";
     card.innerHTML = `
       <div class="cardTop">
         <div>
           <div class="cardTitle">${c.name}</div>
           <div class="cardSub">${c.category} • ${c.silktide_support === "built_in" ? "Silktide built-in" : "Customer-built"}</div>
         </div>
-        <span class="badge ${badgeClass(c.edit_link_strategy)}">${c.edit_link_strategy.replaceAll("_"," ")}</span>
+        <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
       </div>
-      <div class="cardSub" style="margin-top:10px">${c.notes || c.editor_context || ""}</div>
+      <div class="cardSub" style="margin-top:10px">${c.notes || editorText || ""}</div>
       ${tooltip ? `<div class="tooltip" title="${tooltip.replaceAll('"',"&quot;")}">More detail</div>` : ""}
     `;
     card.addEventListener("click", () => selectCMS(c));
@@ -99,10 +114,13 @@ async function selectCMS(c){
   active = c;
   renderList();
 
+  const editStrategy = c.edit_link_strategy || "not_feasible";
+  const editorText = editorContextText(c.editor_context);
+
   $("detailTitle").textContent = c.name;
   $("detailMeta").innerHTML = `
-    <span class="badge ${badgeClass(c.edit_link_strategy)}">${c.edit_link_strategy.replaceAll("_"," ")}</span>
-    <span class="badge">${c.silktide_support.replaceAll("_"," ")}</span>
+    <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
+    <span class="badge">${labelize(c.silktide_support)}</span>
   `;
 
   const summary = buildSummary(c);
@@ -122,7 +140,7 @@ async function selectCMS(c){
       </div>
       <div class="detailCard">
         <h4>Edit link strategy</h4>
-        <p>${labelize(c.edit_link_strategy)}</p>
+        <p>${labelize(editStrategy)}</p>
       </div>
       <div class="detailCard">
         <h4>Retest approach</h4>
@@ -135,7 +153,7 @@ async function selectCMS(c){
     </section>
     <section class="detailBlock">
       <h3>Editor context</h3>
-      <p>${c.editor_context || "Not specified"}</p>
+      <p>${editorText || "Not specified"}</p>
     </section>
     <section class="detailBlock">
       <h3>Integration notes</h3>
