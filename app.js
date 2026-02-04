@@ -5,6 +5,31 @@ let active = null;
 let activeMarkdown = "";
 let userTheme = null;
 
+function labelize(value){
+  if(!value) return "Not specified";
+  return value.replaceAll("_"," ").replaceAll("-", " ");
+}
+
+function buildSummary(c){
+  return [
+    `# ${c.name}`,
+    ``,
+    `Category: ${c.category || "Not specified"}`,
+    `Silktide support: ${labelize(c.silktide_support)}`,
+    `Edit link strategy: ${labelize(c.edit_link_strategy)}`,
+    `Retest strategy: ${labelize(c.retest_strategy)}`,
+    ``,
+    `Editor context:`,
+    `${c.editor_context || "Not specified"}`,
+    ``,
+    `Notes:`,
+    `${c.notes || "Not specified"}`,
+    ``,
+    `Original notes:`,
+    `${c.notes_original || "Not specified"}`,
+  ].join("\n");
+}
+
 function applyTheme(theme){
   const root = document.documentElement;
   if(theme === "dark"){
@@ -53,6 +78,7 @@ function renderList(){
   filtered.forEach(c => {
     const card = document.createElement("div");
     card.className = "card" + (active && active.slug === c.slug ? " active" : "");
+    const tooltip = c.editor_context || c.notes || "";
     card.innerHTML = `
       <div class="cardTop">
         <div>
@@ -61,7 +87,8 @@ function renderList(){
         </div>
         <span class="badge ${badgeClass(c.edit_link_strategy)}">${c.edit_link_strategy.replaceAll("_"," ")}</span>
       </div>
-      <div class="cardSub" style="margin-top:10px">${c.notes || ""}</div>
+      <div class="cardSub" style="margin-top:10px">${c.notes || c.editor_context || ""}</div>
+      ${tooltip ? `<div class="tooltip" title="${tooltip.replaceAll('"',"&quot;")}">More detail</div>` : ""}
     `;
     card.addEventListener("click", () => selectCMS(c));
     list.appendChild(card);
@@ -78,21 +105,47 @@ async function selectCMS(c){
     <span class="badge">${c.silktide_support.replaceAll("_"," ")}</span>
   `;
 
-  $("copyMd").disabled = true;
-  $("openGuide").setAttribute("aria-disabled","true");
-  $("openGuide").href = "#";
+  const summary = buildSummary(c);
+  activeMarkdown = summary;
+  $("copyMd").disabled = false;
+  $("copyJson").disabled = false;
 
-  try{
-    const res = await fetch(c.guide_path, {cache:"no-store"});
-    const md = await res.text();
-    activeMarkdown = md;
-    $("detailBody").innerHTML = marked.parse(md);
-    $("copyMd").disabled = false;
-    $("openGuide").href = c.guide_path;
-    $("openGuide").removeAttribute("aria-disabled");
-  }catch(e){
-    $("detailBody").innerHTML = `<p class="muted">Could not load guide file. If you're opening this directly from disk, run a local server (see footer).</p>`;
-  }
+  $("detailBody").innerHTML = `
+    <section class="detailBlock">
+      <h3>Integration snapshot</h3>
+      <p class="muted">A quick, customer-facing summary plus the technical notes used by the Silktide team.</p>
+    </section>
+    <section class="detailGrid">
+      <div class="detailCard">
+        <h4>Support status</h4>
+        <p>${labelize(c.silktide_support)}</p>
+      </div>
+      <div class="detailCard">
+        <h4>Edit link strategy</h4>
+        <p>${labelize(c.edit_link_strategy)}</p>
+      </div>
+      <div class="detailCard">
+        <h4>Retest approach</h4>
+        <p>${labelize(c.retest_strategy)}</p>
+      </div>
+      <div class="detailCard">
+        <h4>Category</h4>
+        <p>${c.category || "Not specified"}</p>
+      </div>
+    </section>
+    <section class="detailBlock">
+      <h3>Editor context</h3>
+      <p>${c.editor_context || "Not specified"}</p>
+    </section>
+    <section class="detailBlock">
+      <h3>Integration notes</h3>
+      <p>${c.notes || "Not specified"}</p>
+    </section>
+    <section class="detailBlock detailNote">
+      <h3>Original notes</h3>
+      <p>${c.notes_original || "Not specified"}</p>
+    </section>
+  `;
 }
 
 function bind(){
@@ -122,6 +175,19 @@ function bind(){
       setTimeout(()=> btn.textContent = old, 900);
     }catch(e){
       alert("Copy failed. Select the text manually from the template.");
+    }
+  });
+
+  $("copyJson").addEventListener("click", async () => {
+    if(!active) return;
+    try{
+      await navigator.clipboard.writeText(JSON.stringify(active, null, 2));
+      const btn = $("copyJson");
+      const old = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(()=> btn.textContent = old, 900);
+    }catch(e){
+      alert("Copy failed. Select the data manually.");
     }
   });
 }

@@ -1,22 +1,21 @@
-# Silktide CMS Deep-Link Playbook (static site)
+# Silktide CMS Integration Overview (static site)
 
 This folder contains a static, deployable mini-site that:
-- lists 50 common CMS platforms,
-- indicates whether Silktide has a built-in integration,
-- recommends an edit-link strategy (built-in / meta tag / URL transform / depends / not feasible),
-- provides a ready-to-share Markdown template for each CMS.
+- lists CMS platforms and their integration posture,
+- highlights Silktide support status and edit-link strategy,
+- surfaces editor context and integration notes for each CMS,
+- lets you copy a summary or the raw JSON for any entry.
 
 ## What’s inside
 
 - `index.html` + `app.js` + `styles.css` — the web UI
 - `cms-data.json` — the CMS “database”
-- `guides/*.md` — Notion-friendly deep-link templates (one per CMS)
 
 ## How to run locally
 
 Because the site fetches JSON + Markdown files, open it via a local server (not `file://`).
 
-### Option A: Python (recommended)
+### Option A: Python
 ```bash
 cd silktide-cms-integration-site
 python -m http.server 8000
@@ -35,13 +34,7 @@ This is a static site — you can deploy to:
 - Vercel (static)
 - GitHub Pages (commit the folder and serve it)
 
-## Notion import workflow
-
-Each `guides/*.md` file can be:
-- imported into Notion as a page, or
-- pasted into Notion (Markdown paste).
-
 ## Editing the “database”
 
-Update `cms-data.json` and/or `guides/*.md`.
+Update `cms-data.json`.
 The UI is data-driven — no build step needed.

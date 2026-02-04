@@ -30,8 +30,8 @@
         </div>
       </div>
 
-      <h1>Silktide CMS Deep-Link Playbook</h1>
-      <p class="sub">A practical CMS matrix for deciding how to enable Silktide’s Edit deep links and producing ready-to-share templates.</p>
+      <h1>Silktide CMS Integration Overview</h1>
+      <p class="sub">Explore how Silktide connects to leading CMS platforms. Compare edit-link strategies, understand editor context, and spot when custom work is needed.</p>
 
       <div class="controls">
         <input id="q" class="input" placeholder="Search CMS (e.g., TYPO3, Shopify, Sitecore)" />
@@ -72,24 +72,20 @@
           <div id="detailMeta" class="meta"></div>
         </div>
 
-        <div class="detailActions">
-          <button id="copyMd" class="button" disabled>Copy template (Markdown)</button>
-          <a id="openGuide" class="button secondary" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Open guide file</a>
+      <div class="detailActions">
+          <button id="copyMd" class="button" disabled>Copy integration summary</button>
+          <button id="copyJson" class="button secondary" disabled>Copy raw data (JSON)</button>
         </div>
       </div>
 
       <article id="detailBody" class="markdown">
-        <p class="muted">Pick a CMS on the left to view the integration template.</p>
+        <p class="muted">Pick a CMS on the left to view integration details.</p>
       </article>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p class="muted">
-        Tip: This site is static. Deploy it on Netlify/Vercel/GitHub Pages or run <code>python -m http.server</code> locally to avoid fetch restrictions.
-      </p>
-    </div>
+    <div class="container"></div>
   </footer>
 </body>
 </html>
