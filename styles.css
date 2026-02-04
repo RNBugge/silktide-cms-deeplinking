@@ -105,6 +105,8 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .cardTop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
 .cardTitle{font-weight:650}
 .cardSub{color:var(--muted);font-size:13px;margin-top:4px}
+.cardSub p{margin:0}
+.cardSub ul{margin:6px 0 0 18px;padding:0}
 .tooltip{
   margin-top:10px;
   font-size:12px;

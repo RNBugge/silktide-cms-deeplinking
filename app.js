@@ -10,6 +10,14 @@ function labelize(value){
   return value.replaceAll("_"," ").replaceAll("-", " ");
 }
 
+function renderMarkdown(value){
+  if(!value) return "";
+  if(typeof marked !== "undefined"){
+    return marked.parse(value);
+  }
+  return value;
+}
+
 function editorContextText(value){
   if(!value) return "";
   if(typeof value === "string") return value;
@@ -41,6 +49,11 @@ function buildSummary(c){
     `Original notes:`,
     `${c.notes_original || "Not specified"}`,
   ].join("\n");
+}
+
+function getTemplate(c){
+  if(c.template_md) return c.template_md;
+  return buildSummary(c);
 }
 
 function applyTheme(theme){
@@ -102,7 +115,7 @@ function renderList(){
         </div>
         <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
       </div>
-      <div class="cardSub" style="margin-top:10px">${c.notes || editorText || ""}</div>
+      <div class="cardSub" style="margin-top:10px">${renderMarkdown(c.notes || editorText || "")}</div>
       ${tooltip ? `<div class="tooltip" title="${tooltip.replaceAll('"',"&quot;")}">More detail</div>` : ""}
     `;
     card.addEventListener("click", () => selectCMS(c));
@@ -123,47 +136,12 @@ async function selectCMS(c){
     <span class="badge">${labelize(c.silktide_support)}</span>
   `;
 
-  const summary = buildSummary(c);
-  activeMarkdown = summary;
+  const template = getTemplate(c);
+  activeMarkdown = template;
   $("copyMd").disabled = false;
   $("copyJson").disabled = false;
 
-  $("detailBody").innerHTML = `
-    <section class="detailBlock">
-      <h3>Integration snapshot</h3>
-      <p class="muted">A quick, customer-facing summary plus the technical notes used by the Silktide team.</p>
-    </section>
-    <section class="detailGrid">
-      <div class="detailCard">
-        <h4>Support status</h4>
-        <p>${labelize(c.silktide_support)}</p>
-      </div>
-      <div class="detailCard">
-        <h4>Edit link strategy</h4>
-        <p>${labelize(editStrategy)}</p>
-      </div>
-      <div class="detailCard">
-        <h4>Retest approach</h4>
-        <p>${labelize(c.retest_strategy)}</p>
-      </div>
-      <div class="detailCard">
-        <h4>Category</h4>
-        <p>${c.category || "Not specified"}</p>
-      </div>
-    </section>
-    <section class="detailBlock">
-      <h3>Editor context</h3>
-      <p>${editorText || "Not specified"}</p>
-    </section>
-    <section class="detailBlock">
-      <h3>Integration notes</h3>
-      <p>${c.notes || "Not specified"}</p>
-    </section>
-    <section class="detailBlock detailNote">
-      <h3>Original notes</h3>
-      <p>${c.notes_original || "Not specified"}</p>
-    </section>
-  `;
+  $("detailBody").innerHTML = renderMarkdown(template);
 }
 
 function bind(){
