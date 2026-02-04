@@ -56,6 +56,25 @@ function getTemplate(c){
   return buildSummary(c);
 }
 
+function buildInlineDetail(c){
+  const editStrategy = c.edit_link_strategy || "not_feasible";
+  const template = getTemplate(c);
+  return `
+    <div class="inlineHeader">
+      <div class="meta">
+        <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
+        <span class="badge">${labelize(c.silktide_support)}</span>
+        ${c.retest_strategy ? `<span class="badge">${labelize(c.retest_strategy)}</span>` : ""}
+      </div>
+      <div class="inlineActions">
+        <button class="button small" type="button" data-action="copy-md">Copy template</button>
+        <button class="button secondary small" type="button" data-action="copy-json">Copy JSON</button>
+      </div>
+    </div>
+    <div class="markdown">${renderMarkdown(template)}</div>
+  `;
+}
+
 async function copyText(text, button){
   if(!text) return;
   try{
@@ -115,8 +134,12 @@ function renderList(){
 
   filtered.forEach(c => {
     const editStrategy = c.edit_link_strategy || "not_feasible";
+    const row = document.createElement("div");
+    const isActive = active && active.slug === c.slug;
+    row.className = "cardRow" + (isActive ? " activeRow" : "");
+
     const card = document.createElement("div");
-    card.className = "card" + (active && active.slug === c.slug ? " active" : "");
+    card.className = "card" + (isActive ? " active" : "");
     const editorText = editorContextText(c.editor_context);
     const tooltip = editorText || c.notes || "";
     card.innerHTML = `
@@ -131,48 +154,79 @@ function renderList(){
       ${tooltip ? `<div class="tooltip" title="${tooltip.replaceAll('"',"&quot;")}">More detail</div>` : ""}
     `;
     card.addEventListener("click", () => selectCMS(c));
-    list.appendChild(card);
+    row.appendChild(card);
+
+    if(isActive){
+      const detail = document.createElement("div");
+      detail.className = "inlineDetail";
+      detail.innerHTML = buildInlineDetail(c);
+
+      const btnMd = detail.querySelector('[data-action="copy-md"]');
+      const btnJson = detail.querySelector('[data-action="copy-json"]');
+      if(btnMd){
+        btnMd.addEventListener("click", (e) => {
+          e.stopPropagation();
+          copyText(getTemplate(c), btnMd);
+        });
+      }
+      if(btnJson){
+        btnJson.addEventListener("click", (e) => {
+          e.stopPropagation();
+          copyText(JSON.stringify(c, null, 2), btnJson);
+        });
+      }
+
+      row.appendChild(detail);
+      requestAnimationFrame(() => detail.classList.add("is-open"));
+    }
+
+    list.appendChild(row);
+  });
+}
+
+function closeInlineDetail(){
+  const detail = document.querySelector(".inlineDetail.is-open");
+  if(!detail) return Promise.resolve(false);
+  return new Promise((resolve) => {
+    let done = false;
+    const finish = () => {
+      if(done) return;
+      done = true;
+      detail.removeEventListener("transitionend", onEnd);
+      resolve(true);
+    };
+    const onEnd = (e) => {
+      if(e.propertyName === "max-height" || e.propertyName === "opacity"){
+        finish();
+      }
+    };
+    detail.addEventListener("transitionend", onEnd);
+    detail.classList.remove("is-open");
+    setTimeout(finish, 320);
   });
 }
 
 async function selectCMS(c){
-  const detailPanel = document.querySelector(".detail");
   if(active && active.slug === c.slug){
+    const closed = await closeInlineDetail();
     active = null;
     activeMarkdown = "";
-    $("detailTitle").textContent = "Select a CMS";
-    $("detailMeta").innerHTML = "";
-    $("detailBody").innerHTML = `<p class="muted">Pick a CMS on the left to view integration details.</p>`;
-    $("copyMd").disabled = true;
-    $("copyJson").disabled = true;
-    if(detailPanel) detailPanel.classList.remove("is-open");
-    renderList();
+    if(closed) {
+      renderList();
+    } else {
+      renderList();
+    }
     return;
   }
 
+  if(active){
+    await closeInlineDetail();
+  }
+
   active = c;
-  renderList();
-
-  const editStrategy = c.edit_link_strategy || "not_feasible";
-  const editorText = editorContextText(c.editor_context);
-
-  $("detailTitle").textContent = c.name;
-  $("detailMeta").innerHTML = `
-    <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
-    <span class="badge">${labelize(c.silktide_support)}</span>
-  `;
-
   const template = getTemplate(c);
   activeMarkdown = template;
-  $("copyMd").disabled = false;
-  $("copyJson").disabled = false;
-
-  $("detailBody").innerHTML = renderMarkdown(template);
-  if(detailPanel){
-    detailPanel.classList.remove("is-open");
-    void detailPanel.offsetWidth;
-    detailPanel.classList.add("is-open");
-  }
+  renderList();
 }
 
 function bind(){
