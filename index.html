@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Silktide CMS Deep-Link Playbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script defer src="app.js"></script>
@@ -11,6 +14,22 @@
 <body>
   <header class="header">
     <div class="container">
+      <div class="headerRow">
+        <div class="brand">
+          <span class="brandDot"></span>
+          <span class="brandName">Silktide</span>
+          <span class="brandTag">CMS Integration</span>
+        </div>
+        <div class="headerActions">
+          <div class="themeToggle">
+            <span class="themeLabel">Dark mode</span>
+            <button id="themeToggle" class="toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+              <span class="toggleKnob"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <h1>Silktide CMS Deep-Link Playbook</h1>
       <p class="sub">A practical CMS matrix for deciding how to enable Silktide’s Edit deep links and producing ready-to-share templates.</p>
 

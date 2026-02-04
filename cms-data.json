@@ -12,13 +12,13 @@
   },
   {
     "slug": "drupal",
-    "name": "Drupal (7–11)",
+    "name": "Drupal (7\u201311)",
     "category": "Open-source CMS",
     "silktide_support": "built_in",
     "silktide_help_url": "https://help.silktide.com/en/articles/8020843-how-to-integrate-silktide-with-drupal-8",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Silktide supports Drupal 7–11 via built-in integration guides.",
+    "notes": "Silktide supports Drupal 7\u201311 via built-in integration guides.",
     "guide_path": "guides/drupal.md"
   },
   {
@@ -88,13 +88,23 @@
     "guide_path": "guides/jadu.md"
   },
   {
+    "slug": "cascade_cms",
+    "name": "Cascade CMS (Hannon Hill)",
+    "category": "Enterprise / Higher-Ed CMS",
+    "silktide_support": "custom",
+    "edit_link_strategy": "meta_tag",
+    "retest_strategy": "event_handler",
+    "notes": "Cascade editor URLs are asset-ID based; public URLs typically do not include the internal asset ID, so Silktide cannot reliably derive editor links via URL transform. Output a per-page silktide-cms meta tag containing the correct editorUrl.",
+    "guide_path": "guides/cascade_cms.md"
+  },
+  {
     "slug": "typo3",
     "name": "TYPO3",
     "category": "Open-source CMS",
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "hook_or_extension",
-    "notes": "TYPO3 backend deep links include internal page uid and often a security token/route; public URL alone isn’t enough. Use meta tag built from page uid + backend route.",
+    "notes": "TYPO3 backend deep links include internal page uid and often a security token/route; public URL alone isn\u2019t enough. Use meta tag built from page uid + backend route.",
     "guide_path": "guides/typo3.md"
   },
   {
@@ -214,7 +224,7 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "power_automate_or_webhook",
-    "notes": "Some SharePoint Online pages can be opened in edit mode via predictable URL parameters (varies by tenant/page type). If not, fall back to meta tag with internal IDs or link to the site’s Pages/Library UI.",
+    "notes": "Some SharePoint Online pages can be opened in edit mode via predictable URL parameters (varies by tenant/page type). If not, fall back to meta tag with internal IDs or link to the site\u2019s Pages/Library UI.",
     "guide_path": "guides/sharepoint.md"
   },
   {
@@ -304,7 +314,7 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "webhook",
-    "notes": "Ghost supports a front-end “/edit” shortcut: append /edit to the public post/page URL to redirect to the editor (login required).",
+    "notes": "Ghost supports a front-end \u201c/edit\u201d shortcut: append /edit to the public post/page URL to redirect to the editor (login required).",
     "guide_path": "guides/ghost.md"
   },
   {
@@ -335,7 +345,7 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Admin edit URLs usually include entity IDs; public slugs aren’t enough.",
+    "notes": "Admin edit URLs usually include entity IDs; public slugs aren\u2019t enough.",
     "guide_path": "guides/shopware.md"
   },
   {
@@ -365,7 +375,7 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Manager edit URLs are resource-ID based; public slugs don’t reliably include IDs.",
+    "notes": "Manager edit URLs are resource-ID based; public slugs don\u2019t reliably include IDs.",
     "guide_path": "guides/modx.md"
   },
   {
@@ -475,7 +485,7 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Authoring is ID-based and implementation-specific; public URLs don’t reliably encode item IDs.",
+    "notes": "Authoring is ID-based and implementation-specific; public URLs don\u2019t reliably encode item IDs.",
     "guide_path": "guides/brightspot.md"
   },
   {

@@ -3,21 +3,26 @@
 **Silktide support:** Custom (customer-built)  
 **Recommended deep-link approach:** URL transform (derive editor URL from public URL)
 
-Use this template to enable Silktide’s **Edit** button to deep-link users from a page in Silktide to the correct editor screen in **Ghost**.
+Use this guide to enable Silktide’s **Edit** button to deep-link users from a page in Silktide to the correct editor screen in **Ghost**.
 
-## CMS-specific considerations
+## How editing works in this CMS
+Ghost supports opening the editor for a published page/post by adding `/edit` to the end of the public URL. This redirects into Ghost Admin (login required).
+
+## Recommended approach and why
 Ghost supports a front-end “/edit” shortcut: append /edit to the public post/page URL to redirect to the editor (login required).
 
+### URL transform rule
+**Example:** Public: https://example.com/blog/my-post → Editor: https://example.com/blog/my-post/edit
+
+If this works in your environment, you can configure Silktide to derive the editor URL from the public URL using the rule above.
+
+### Fallback if URL transform does not work
+If your CMS requires internal IDs (and you cannot derive them from the public URL), use the **Meta tag** strategy instead.
+
 ## What Silktide needs
-Silktide needs a URL that a user should visit to edit a given public page in your CMS. When a user clicks **Edit** in Silktide, they are sent to that `editorUrl` (and may be prompted to log in).
+Silktide needs a URL that an editor should visit to edit **this specific public page** in your CMS. When a user clicks **Edit** in Silktide, they are sent to that `editorUrl` (and may be prompted to log in).
 
-## Recommended approach
-### Use URL transform (recommended)
-If your CMS editor URL can be derived from the public URL **without internal IDs** (for example: host swap, append `/edit`, or add an edit query parameter), Silktide can deep-link using a URL transform.
-If the editor URL requires internal IDs (e.g., `pageId=123`), use the **Meta tag format** below instead.
-
-## Meta tag format (Silktide “Edit” button)
-
+## Meta tag (fallback option)
 Silktide reads a per-page meta tag in the HTML `<head>`:
 
 ```html
@@ -30,15 +35,18 @@ The Base64 value must decode to JSON like:
 { "cms": "YOUR_CMS_NAME", "editorUrl": "https://cms.example.com/edit/..." }
 ```
 
-**Rules**
-- `editorUrl` should be an absolute URL that opens the editor for **this specific page**.
+### Rules
+- `editorUrl` must be an absolute URL that opens the editor for **this specific page**.
 - Do **not** include authentication tokens, usernames, or any secret values (Base64 is reversible).
-- If your editor URL requires internal IDs (page/entry GUIDs), generate this tag dynamically at render time.
+- If the editor URL needs internal IDs, generate the meta tag dynamically at render time.
+
+### How to build `editorUrl` in this CMS
+No internal IDs needed if `/edit` works on your Ghost site.
+
+### Example editor URL patterns
+- `URL transform: {PUBLIC_URL}/edit`
 
 ### Sample PHP (Base64-encode JSON)
-
-If your stack can output server-side HTML, you can use this pattern:
-
 ```php
 <?php
 $payload = [
@@ -53,35 +61,15 @@ echo '<meta name="silktide-cms" content="' . htmlspecialchars($encoded, ENT_QUOT
 
 (If you don’t use PHP, replicate the same logic in your server-side language.)
 
-## URL transform (optional)
-
-If your CMS editor URL can be derived from the public URL using a deterministic string rule (**without internal IDs**), Silktide can deep-link via URL transforms.
-
-**Examples of common transforms**
-- **Host swap:** `https://www.example.com/path` → `https://edit.example.com/path`
-- **Path prefix:** `https://www.example.com/path` → `https://www.example.com/admin/edit/path`
-- **Append segment:** `https://www.example.com/path` → `https://www.example.com/path/edit`
-- **Add query param:** `https://www.example.com/path` → `https://www.example.com/path?mode=edit`
-
-**What to provide**
-- 2–3 example public URLs
-- The matching editor URLs
-- The exact transform rule(s)
-
-If the editor URL requires IDs not present in the public URL (e.g., `pageId=123`), URL transform will not work—use the **Meta tag format** above.
-
 ## Validation checklist
-
 1. Open **two different pages** on your site and view page source.
-2. Search for `silktide-cms` and confirm the meta tag exists in the `<head>`.
+2. Search for `silktide-cms` and confirm the meta tag exists in the `<head>` (if using meta-tag strategy).
 3. Base64-decode the `content` value and confirm:
    - `cms` is correct
-   - `editorUrl` opens the right CMS editor for that page
-4. In Silktide, open a page in the inspector and click **Edit**:
-   - If you’re not logged in to the CMS, you may be prompted to log in first.
+   - `editorUrl` opens the right editor for that page
+4. In Silktide, open the page inspector and click **Edit**.
 
 ## Security notes
-
 - Base64 is **not** encryption; anyone can decode it.
 - Do not embed any values that authenticate a user (tokens, one-time links, usernames).
 - The editor URL should rely on normal CMS authentication/session behavior.

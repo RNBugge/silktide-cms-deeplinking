@@ -3,6 +3,28 @@ const $ = (id) => document.getElementById(id);
 let CMS = [];
 let active = null;
 let activeMarkdown = "";
+let userTheme = null;
+
+function applyTheme(theme){
+  const root = document.documentElement;
+  if(theme === "dark"){
+    root.setAttribute("data-theme","dark");
+  }else if(theme === "light"){
+    root.setAttribute("data-theme","light");
+  }else{
+    root.removeAttribute("data-theme");
+  }
+  const btn = $("themeToggle");
+  if(btn){
+    const isDark = (theme === "dark") || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    btn.setAttribute("aria-pressed", String(isDark));
+  }
+}
+
+function loadTheme(){
+  userTheme = localStorage.getItem("theme");
+  applyTheme(userTheme);
+}
 
 function badgeClass(strategy){
   return strategy || "not_feasible";
@@ -79,6 +101,17 @@ function bind(){
     $(id).addEventListener("change", renderList);
   });
 
+  const themeBtn = $("themeToggle");
+  if(themeBtn){
+    themeBtn.addEventListener("click", () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      const next = isDark ? "light" : "dark";
+      localStorage.setItem("theme", next);
+      userTheme = next;
+      applyTheme(next);
+    });
+  }
+
   $("copyMd").addEventListener("click", async () => {
     if(!activeMarkdown) return;
     try{
@@ -94,6 +127,12 @@ function bind(){
 }
 
 async function init(){
+  loadTheme();
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    if(!userTheme){
+      applyTheme(null);
+    }
+  });
   const res = await fetch("cms-data.json", {cache:"no-store"});
   CMS = await res.json();
   bind();
