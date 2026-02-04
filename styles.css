@@ -105,6 +105,14 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .cardTop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
 .cardTitle{font-weight:650}
 .cardSub{color:var(--muted);font-size:13px;margin-top:4px}
+.tooltip{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+  text-decoration:underline dotted;
+  width:fit-content;
+}
+.tooltip:hover{color:var(--text)}
 .badge{
   padding:4px 10px;
   border-radius:999px;
@@ -139,6 +147,24 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .detailHeader h2{margin:0;font-size:20px;font-family:"Sora",ui-sans-serif,system-ui}
 .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .muted{color:var(--muted)}
+.detailGrid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:12px;
+  margin-bottom:16px;
+}
+@media (max-width: 720px){.detailGrid{grid-template-columns:1fr}}
+.detailCard{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px;
+  background:var(--surface);
+}
+.detailCard h4{margin:0 0 6px 0;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+.detailCard p{margin:0;font-weight:600}
+.detailBlock{margin:14px 0}
+.detailBlock h3{margin:0 0 6px 0;font-size:16px}
+.detailNote{background:var(--surface-2);padding:12px;border-radius:12px;border:1px dashed var(--border)}
 .button{
   padding:10px 14px;
   border-radius:12px;

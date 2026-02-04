@@ -7,19 +7,31 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8117667-how-to-integrate-silktide-with-wordpress",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Silktide provides a built-in integration for deep-linking (Edit button).",
-    "guide_path": "guides/wordpress.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/wordpress.md",
+    "notes_original": "Silktide provides a built-in integration for deep-linking (Edit button).",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8117667-how-to-integrate-silktide-with-wordpress"
+    }
   },
   {
     "slug": "drupal",
-    "name": "Drupal (7\u201311)",
+    "name": "Drupal (7–11)",
     "category": "Open-source CMS",
     "silktide_support": "built_in",
     "silktide_help_url": "https://help.silktide.com/en/articles/8020843-how-to-integrate-silktide-with-drupal-8",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Silktide supports Drupal 7\u201311 via built-in integration guides.",
-    "guide_path": "guides/drupal.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/drupal.md",
+    "notes_original": "Silktide supports Drupal 7–11 via built-in integration guides.",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8020843-how-to-integrate-silktide-with-drupal-8"
+    }
   },
   {
     "slug": "aem",
@@ -29,8 +41,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8020840-how-to-integrate-silktide-with-adobe-experience-manager-aem",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Built-in AEM integration.",
-    "guide_path": "guides/aem.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/aem.md",
+    "notes_original": "Built-in AEM integration.",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8020840-how-to-integrate-silktide-with-adobe-experience-manager-aem"
+    }
   },
   {
     "slug": "umbraco",
@@ -40,8 +58,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8020841-how-to-integrate-silktide-with-umbraco",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Built-in Umbraco integration.",
-    "guide_path": "guides/umbraco.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/umbraco.md",
+    "notes_original": "Built-in Umbraco integration.",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8020841-how-to-integrate-silktide-with-umbraco"
+    }
   },
   {
     "slug": "sitefinity",
@@ -51,8 +75,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8020844-how-to-integrate-silktide-with-sitefinity",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Built-in Sitefinity integration.",
-    "guide_path": "guides/sitefinity.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/sitefinity.md",
+    "notes_original": "Built-in Sitefinity integration.",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8020844-how-to-integrate-silktide-with-sitefinity"
+    }
   },
   {
     "slug": "craftcms",
@@ -62,8 +92,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8020842-how-to-integrate-silktide-with-craft-cms-3",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Built-in Craft CMS integration (guide references Craft CMS 3).",
-    "guide_path": "guides/craftcms.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/craftcms.md",
+    "notes_original": "Built-in Craft CMS integration (guide references Craft CMS 3).",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8020842-how-to-integrate-silktide-with-craft-cms-3"
+    }
   },
   {
     "slug": "terminalfour",
@@ -73,8 +109,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8170116-how-to-integrate-silktide-with-terminalfour",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Built-in Terminalfour integration.",
-    "guide_path": "guides/terminalfour.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/terminalfour.md",
+    "notes_original": "Built-in Terminalfour integration.",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8170116-how-to-integrate-silktide-with-terminalfour"
+    }
   },
   {
     "slug": "jadu",
@@ -84,8 +126,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8020846-how-to-integrate-silktide-with-jadu",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Built-in Jadu integration.",
-    "guide_path": "guides/jadu.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/jadu.md",
+    "notes_original": "Built-in Jadu integration.",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8020846-how-to-integrate-silktide-with-jadu"
+    }
   },
   {
     "slug": "cascade_cms",
@@ -94,8 +142,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Cascade editor URLs are asset-ID based; public URLs typically do not include the internal asset ID, so Silktide cannot reliably derive editor links via URL transform. Output a per-page silktide-cms meta tag containing the correct editorUrl.",
-    "guide_path": "guides/cascade_cms.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Site template/header include used across all pages.\n**How to build `editorUrl`:** Cascade authoring is asset-ID driven; store/emit the relevant asset ID for the published page.\n**Common editor URL pattern(s):** https://{CASCADE_HOST}/entity/open.act?id={ASSET_ID}&type=page (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/cascade_cms.md",
+    "notes_original": "Cascade editor URLs are asset-ID based; public URLs typically do not include the internal asset ID, so Silktide cannot reliably derive editor links via URL transform. Output a per-page silktide-cms meta tag containing the correct editorUrl.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{CASCADE_HOST}/entity/open.act?id={ASSET_ID}&type=page"
+      ],
+      "id_source_hint": "Cascade authoring is asset-ID driven; store/emit the relevant asset ID for the published page.",
+      "where_to_inject": "Site template/header include used across all pages."
+    }
   },
   {
     "slug": "typo3",
@@ -104,8 +162,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "hook_or_extension",
-    "notes": "TYPO3 backend deep links include internal page uid and often a security token/route; public URL alone isn\u2019t enough. Use meta tag built from page uid + backend route.",
-    "guide_path": "guides/typo3.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Global frontend <head> (Fluid layout / sitepackage) so every page emits its own editorUrl.\n**How to build `editorUrl`:** Use the current page UID from TYPO3 during render (page tree node UID).\n**Common editor URL pattern(s):** https://{SITE}/typo3/record/edit?edit[pages][{PAGE_UID}]=edit (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/typo3.md",
+    "notes_original": "TYPO3 backend deep links include internal page uid and often a security token/route; public URL alone isn’t enough. Use meta tag built from page uid + backend route.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/typo3/record/edit?edit[pages][{PAGE_UID}]=edit"
+      ],
+      "id_source_hint": "Use the current page UID from TYPO3 during render (page tree node UID).",
+      "where_to_inject": "Global frontend <head> (Fluid layout / sitepackage) so every page emits its own editorUrl."
+    }
   },
   {
     "slug": "joomla",
@@ -114,8 +182,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "plugin",
-    "notes": "Use a per-page silktide-cms meta tag to provide the exact editor URL for each page.",
-    "guide_path": "guides/joomla.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Template <head> override (or system plugin) to emit the meta tag per page.\n**How to build `editorUrl`:** If the page is an article, use the article ID; for menu items/components, map to the underlying entity ID.\n**Common editor URL pattern(s):** https://{SITE}/administrator/index.php?option=com_content&task=article.edit&id={ARTICLE_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/joomla.md",
+    "notes_original": "Use a per-page silktide-cms meta tag to provide the exact editor URL for each page.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/administrator/index.php?option=com_content&task=article.edit&id={ARTICLE_ID}"
+      ],
+      "id_source_hint": "If the page is an article, use the article ID; for menu items/components, map to the underlying entity ID.",
+      "where_to_inject": "Template <head> override (or system plugin) to emit the meta tag per page."
+    }
   },
   {
     "slug": "shopify",
@@ -124,8 +202,20 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Admin URLs are ID-based; in Liquid you can access object.id for products/pages/blog posts and build the editorUrl meta tag.",
-    "guide_path": "guides/shopify.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** theme.liquid <head> (or equivalent layout) with logic per template type.\n**How to build `editorUrl`:** In Liquid, many templates expose object IDs (e.g., product.id, page.id, article.id). Use the relevant one.\n**Common editor URL pattern(s):** https://admin.shopify.com/store/{STORE_HANDLE}/pages/{PAGE_ID}; https://admin.shopify.com/store/{STORE_HANDLE}/products/{PRODUCT_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/shopify.md",
+    "notes_original": "Admin URLs are ID-based; in Liquid you can access object.id for products/pages/blog posts and build the editorUrl meta tag.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://admin.shopify.com/store/{STORE_HANDLE}/pages/{PAGE_ID}",
+        "https://admin.shopify.com/store/{STORE_HANDLE}/products/{PRODUCT_ID}",
+        "https://admin.shopify.com/store/{STORE_HANDLE}/blogs/{BLOG_ID}/articles/{ARTICLE_ID}"
+      ],
+      "id_source_hint": "In Liquid, many templates expose object IDs (e.g., product.id, page.id, article.id). Use the relevant one.",
+      "where_to_inject": "theme.liquid <head> (or equivalent layout) with logic per template type."
+    }
   },
   {
     "slug": "magento",
@@ -134,8 +224,19 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "module_event",
-    "notes": "Admin edit screens use entity IDs and often require an authenticated session; do not include tokens in editor URLs. Use meta tag with non-tokenized edit URL.",
-    "guide_path": "guides/magento.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend theme head block; compute editorUrl server-side.\n**How to build `editorUrl`:** Use entity IDs from Magento models (product ID, CMS page ID). Avoid including form keys/tokens.\n**Common editor URL pattern(s):** https://{SITE}/admin/*/catalog/product/edit/id/{PRODUCT_ID}; https://{SITE}/admin/*/cms/page/edit/page_id/{PAGE_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/magento.md",
+    "notes_original": "Admin edit screens use entity IDs and often require an authenticated session; do not include tokens in editor URLs. Use meta tag with non-tokenized edit URL.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/admin/*/catalog/product/edit/id/{PRODUCT_ID}",
+        "https://{SITE}/admin/*/cms/page/edit/page_id/{PAGE_ID}"
+      ],
+      "id_source_hint": "Use entity IDs from Magento models (product ID, CMS page ID). Avoid including form keys/tokens.",
+      "where_to_inject": "Frontend theme head block; compute editorUrl server-side."
+    }
   },
   {
     "slug": "bigcommerce",
@@ -144,8 +245,19 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Admin edit screens are ID-based. Use storefront templates to emit meta tag if you can access product/page IDs; otherwise rely on URL transform is not recommended.",
-    "guide_path": "guides/bigcommerce.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Storefront theme <head> (Stencil) with context-aware variables.\n**How to build `editorUrl`:** Use the internal object ID if available in templates; if not, you'll need a mapping from URL/slug to ID.\n**Common editor URL pattern(s):** https://store-{STORE_HASH}.mybigcommerce.com/manage/products/{PRODUCT_ID}; https://store-{STORE_HASH}.mybigcommerce.com/manage/pages/{PAGE_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/bigcommerce.md",
+    "notes_original": "Admin edit screens are ID-based. Use storefront templates to emit meta tag if you can access product/page IDs; otherwise rely on URL transform is not recommended.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://store-{STORE_HASH}.mybigcommerce.com/manage/products/{PRODUCT_ID}",
+        "https://store-{STORE_HASH}.mybigcommerce.com/manage/pages/{PAGE_ID}"
+      ],
+      "id_source_hint": "Use the internal object ID if available in templates; if not, you'll need a mapping from URL/slug to ID.",
+      "where_to_inject": "Storefront theme <head> (Stencil) with context-aware variables."
+    }
   },
   {
     "slug": "webflow",
@@ -154,8 +266,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "not_feasible",
     "retest_strategy": "webhook",
-    "notes": "Webflow editing URLs are not reliably derivable from public URLs without internal IDs; deep linking to a specific page is typically not feasible.",
-    "guide_path": "guides/webflow.md"
+    "notes": "**Deep-link approach:** Not feasible (no stable page-specific editor URL).\n**Recommendation:** Link to the CMS dashboard or relevant content list, or omit Edit links for this CMS.\n**Context:** Webflow editing URLs are not reliably derivable from public URLs without internal IDs; deep linking to a specific page is typically not feasible.",
+    "guide_path": "guides/webflow.md",
+    "notes_original": "Webflow editing URLs are not reliably derivable from public URLs without internal IDs; deep linking to a specific page is typically not feasible.",
+    "editor_context": {
+      "strategy": "not_feasible",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "wix",
@@ -164,8 +281,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "not_feasible",
     "retest_strategy": "limited",
-    "notes": "Deep linking to edit a specific page is generally not feasible; Wix uses editor/session context. Consider linking to the site dashboard only, or skip edit links.",
-    "guide_path": "guides/wix.md"
+    "notes": "**Deep-link approach:** Not feasible (no stable page-specific editor URL).\n**Recommendation:** Link to the CMS dashboard or relevant content list, or omit Edit links for this CMS.\n**Context:** Deep linking to edit a specific page is generally not feasible; Wix uses editor/session context. Consider linking to the site dashboard only, or skip edit links.",
+    "guide_path": "guides/wix.md",
+    "notes_original": "Deep linking to edit a specific page is generally not feasible; Wix uses editor/session context. Consider linking to the site dashboard only, or skip edit links.",
+    "editor_context": {
+      "strategy": "not_feasible",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "squarespace",
@@ -174,8 +296,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "not_feasible",
     "retest_strategy": "limited",
-    "notes": "Page-specific edit deep links are generally not feasible; editor URLs are not stable per page. Consider linking to the site dashboard only, or skip edit links.",
-    "guide_path": "guides/squarespace.md"
+    "notes": "**Deep-link approach:** Not feasible (no stable page-specific editor URL).\n**Recommendation:** Link to the CMS dashboard or relevant content list, or omit Edit links for this CMS.\n**Context:** Page-specific edit deep links are generally not feasible; editor URLs are not stable per page. Consider linking to the site dashboard only, or skip edit links.",
+    "guide_path": "guides/squarespace.md",
+    "notes_original": "Page-specific edit deep links are generally not feasible; editor URLs are not stable per page. Consider linking to the site dashboard only, or skip edit links.",
+    "editor_context": {
+      "strategy": "not_feasible",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "hubspot",
@@ -184,8 +311,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "HubSpot editor URLs include portal ID and content ID. If your templates can access these IDs, emit meta tag; otherwise edit deep links may be limited.",
-    "guide_path": "guides/hubspot.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** HubSpot theme templates (<head>) or module that renders on all pages.\n**How to build `editorUrl`:** Needs portalId + contentId; if templates can access them, emit directly; otherwise you may need a lookup/mapping layer.\n**Common editor URL pattern(s):** https://app.hubspot.com/content/{PORTAL_ID}/edit/{CONTENT_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/hubspot.md",
+    "notes_original": "HubSpot editor URLs include portal ID and content ID. If your templates can access these IDs, emit meta tag; otherwise edit deep links may be limited.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://app.hubspot.com/content/{PORTAL_ID}/edit/{CONTENT_ID}"
+      ],
+      "id_source_hint": "Needs portalId + contentId; if templates can access them, emit directly; otherwise you may need a lookup/mapping layer.",
+      "where_to_inject": "HubSpot theme templates (<head>) or module that renders on all pages."
+    }
   },
   {
     "slug": "sitecore",
@@ -194,8 +331,15 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "event_handler",
-    "notes": "Many Sitecore sites support Experience Editor via predictable URL changes (e.g., query params like sc_mode=edit and/or host swap). If your setup requires item IDs, use the meta tag strategy.",
-    "guide_path": "guides/sitecore.md"
+    "notes": "**Deep-link approach:** URL transform (Silktide derives the editor URL by manipulating the public URL).\n**Transform rule:** Commonly add `sc_mode=edit` (and sometimes `sc_lang`/`sc_site`) or use an Experience Editor host mapping.\n**Notes:** Varies by Sitecore version and routing; if the editor requires item IDs, use meta tag instead.\n**When to use meta tag instead:** If the CMS editor URL requires internal IDs (e.g., pageId/itemId) that are not present in the public URL.",
+    "guide_path": "guides/sitecore.md",
+    "notes_original": "Many Sitecore sites support Experience Editor via predictable URL changes (e.g., query params like sc_mode=edit and/or host swap). If your setup requires item IDs, use the meta tag strategy.",
+    "editor_context": {
+      "strategy": "url_transform",
+      "silktide_support": "custom",
+      "transform_rule": "Commonly add `sc_mode=edit` (and sometimes `sc_lang`/`sc_site`) or use an Experience Editor host mapping.",
+      "limitations": "Varies by Sitecore version and routing; if the editor requires item IDs, use meta tag instead."
+    }
   },
   {
     "slug": "optimizely",
@@ -204,8 +348,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "depends",
     "retest_strategy": "event_handler",
-    "notes": "Optimizely supports on-page editing; some implementations use epieditmode=True on specific CMS URLs (often includes internal IDs). Treat as meta tag by default, but URL transform may work if your preview URLs are deterministic.",
-    "guide_path": "guides/optimizely.md"
+    "notes": "**Deep-link approach:** Depends (URL transform may work in some setups; meta tag is the safe default).\n**Decision rule:** If you can deterministically map the public URL to an editor URL without internal IDs, use URL transform. Otherwise use the meta tag.\n**Context:** Optimizely supports on-page editing; some implementations use epieditmode=True on specific CMS URLs (often includes internal IDs). Treat as meta tag by default, but URL transform may work if your preview URLs are deterministic.",
+    "guide_path": "guides/optimizely.md",
+    "notes_original": "Optimizely supports on-page editing; some implementations use epieditmode=True on specific CMS URLs (often includes internal IDs). Treat as meta tag by default, but URL transform may work if your preview URLs are deterministic.",
+    "editor_context": {
+      "strategy": "depends",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "kentico",
@@ -214,8 +363,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "depends",
     "retest_strategy": "event_handler",
-    "notes": "Often requires internal identifiers (NodeID/DocumentID). If on-site editing is enabled, some setups allow an edit-mode URL derived from the public path (e.g., /cmsctx/... + editmode=1). Otherwise use meta tag built from CMS IDs.",
-    "guide_path": "guides/kentico.md"
+    "notes": "**Deep-link approach:** Depends (URL transform may work in some setups; meta tag is the safe default).\n**Decision rule:** If you can deterministically map the public URL to an editor URL without internal IDs, use URL transform. Otherwise use the meta tag.\n**Context:** Often requires internal identifiers (NodeID/DocumentID). If on-site editing is enabled, some setups allow an edit-mode URL derived from the public path (e.g., /cmsctx/... + editmode=1). Otherwise use meta tag built from CMS IDs.",
+    "guide_path": "guides/kentico.md",
+    "notes_original": "Often requires internal identifiers (NodeID/DocumentID). If on-site editing is enabled, some setups allow an edit-mode URL derived from the public path (e.g., /cmsctx/... + editmode=1). Otherwise use meta tag built from CMS IDs.",
+    "editor_context": {
+      "strategy": "depends",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "sharepoint",
@@ -224,8 +378,15 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "power_automate_or_webhook",
-    "notes": "Some SharePoint Online pages can be opened in edit mode via predictable URL parameters (varies by tenant/page type). If not, fall back to meta tag with internal IDs or link to the site\u2019s Pages/Library UI.",
-    "guide_path": "guides/sharepoint.md"
+    "notes": "**Deep-link approach:** URL transform (Silktide derives the editor URL by manipulating the public URL).\n**Transform rule:** Tenant/page-type dependent. Where supported, use an edit-mode parameter (e.g., `?Mode=Edit`) or link to the Pages library edit UI.\n**Notes:** SharePoint URL shapes vary; if edit-mode URLs aren't stable, link to the Pages library or use meta tag if you can inject it.\n**When to use meta tag instead:** If the CMS editor URL requires internal IDs (e.g., pageId/itemId) that are not present in the public URL.",
+    "guide_path": "guides/sharepoint.md",
+    "notes_original": "Some SharePoint Online pages can be opened in edit mode via predictable URL parameters (varies by tenant/page type). If not, fall back to meta tag with internal IDs or link to the site’s Pages/Library UI.",
+    "editor_context": {
+      "strategy": "url_transform",
+      "silktide_support": "custom",
+      "transform_rule": "Tenant/page-type dependent. Where supported, use an edit-mode parameter (e.g., `?Mode=Edit`) or link to the Pages library edit UI.",
+      "limitations": "SharePoint URL shapes vary; if edit-mode URLs aren't stable, link to the Pages library or use meta tag if you can inject it."
+    }
   },
   {
     "slug": "liferay",
@@ -234,8 +395,15 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "event_handler",
-    "notes": "Liferay pages can be opened in edit mode by adding p_l_mode=edit to the page URL (requires permissions).",
-    "guide_path": "guides/liferay.md"
+    "notes": "**Deep-link approach:** URL transform (Silktide derives the editor URL by manipulating the public URL).\n**Transform rule:** Add `p_l_mode=edit` to the page URL query string (e.g., `...?p_l_mode=edit`).\n**Notes:** Requires permissions; portals may still accept this even with friendly URLs.\n**When to use meta tag instead:** If the CMS editor URL requires internal IDs (e.g., pageId/itemId) that are not present in the public URL.",
+    "guide_path": "guides/liferay.md",
+    "notes_original": "Liferay pages can be opened in edit mode by adding p_l_mode=edit to the page URL (requires permissions).",
+    "editor_context": {
+      "strategy": "url_transform",
+      "silktide_support": "custom",
+      "transform_rule": "Add `p_l_mode=edit` to the page URL query string (e.g., `...?p_l_mode=edit`).",
+      "limitations": "Requires permissions; portals may still accept this even with friendly URLs."
+    }
   },
   {
     "slug": "magnolia",
@@ -244,8 +412,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Typically edited via AdminCentral/Pages app and internal node paths/UUIDs; no universal 1:1 URL transform from public URL. Use meta tag built from Magnolia page node info.",
-    "guide_path": "guides/magnolia.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** In the global frontend `<head>` so every page emits a `silktide-cms` meta tag.\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/magnolia.md",
+    "notes_original": "Typically edited via AdminCentral/Pages app and internal node paths/UUIDs; no universal 1:1 URL transform from public URL. Use meta tag built from Magnolia page node info.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "contentful",
@@ -254,8 +427,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Headless: frontend can emit meta tag with the entry ID and a preconfigured space/environment.",
-    "guide_path": "guides/contentful.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Your frontend app layout/head; can be server-rendered or injected at build time.\n**How to build `editorUrl`:** Emit the Contentful entry ID used to render the page (plus space/environment).\n**Common editor URL pattern(s):** https://app.contentful.com/spaces/{SPACE_ID}/environments/{ENV_ID}/entries/{ENTRY_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/contentful.md",
+    "notes_original": "Headless: frontend can emit meta tag with the entry ID and a preconfigured space/environment.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://app.contentful.com/spaces/{SPACE_ID}/environments/{ENV_ID}/entries/{ENTRY_ID}"
+      ],
+      "id_source_hint": "Emit the Contentful entry ID used to render the page (plus space/environment).",
+      "where_to_inject": "Your frontend app layout/head; can be server-rendered or injected at build time."
+    }
   },
   {
     "slug": "sanity",
@@ -264,8 +447,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Headless: emit meta tag with document ID and studio URL (often uses intents).",
-    "guide_path": "guides/sanity.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head; many setups already have document data at render time.\n**How to build `editorUrl`:** Emit the Sanity document _id (and optionally _type) used for the page; studio host is customer-specific.\n**Common editor URL pattern(s):** https://{STUDIO_HOST}/intent/edit/id={DOC_ID};type={DOC_TYPE} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/sanity.md",
+    "notes_original": "Headless: emit meta tag with document ID and studio URL (often uses intents).",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{STUDIO_HOST}/intent/edit/id={DOC_ID};type={DOC_TYPE}"
+      ],
+      "id_source_hint": "Emit the Sanity document _id (and optionally _type) used for the page; studio host is customer-specific.",
+      "where_to_inject": "Frontend head; many setups already have document data at render time."
+    }
   },
   {
     "slug": "prismic",
@@ -274,8 +467,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Headless: emit meta tag with document ID/UID and repository name.",
-    "guide_path": "guides/prismic.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head in the app that renders Prismic content.\n**How to build `editorUrl`:** Emit the Prismic document ID (or UID) used for the page; repo name is customer-specific.\n**Common editor URL pattern(s):** https://{REPO}.prismic.io/documents~b=working&documentId={DOC_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/prismic.md",
+    "notes_original": "Headless: emit meta tag with document ID/UID and repository name.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{REPO}.prismic.io/documents~b=working&documentId={DOC_ID}"
+      ],
+      "id_source_hint": "Emit the Prismic document ID (or UID) used for the page; repo name is customer-specific.",
+      "where_to_inject": "Frontend head in the app that renders Prismic content."
+    }
   },
   {
     "slug": "storyblok",
@@ -284,8 +487,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Headless: emit meta tag with story ID and space ID, pointing into the Visual Editor.",
-    "guide_path": "guides/storyblok.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head; Storyblok SDK already passes story info in preview modes.\n**How to build `editorUrl`:** Emit Story ID and Space ID; Storyblok content APIs usually provide story.id.\n**Common editor URL pattern(s):** https://app.storyblok.com/#/me/spaces/{SPACE_ID}/stories/0/0/{STORY_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/storyblok.md",
+    "notes_original": "Headless: emit meta tag with story ID and space ID, pointing into the Visual Editor.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://app.storyblok.com/#/me/spaces/{SPACE_ID}/stories/0/0/{STORY_ID}"
+      ],
+      "id_source_hint": "Emit Story ID and Space ID; Storyblok content APIs usually provide story.id.",
+      "where_to_inject": "Frontend head; Storyblok SDK already passes story info in preview modes."
+    }
   },
   {
     "slug": "strapi",
@@ -294,8 +507,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "lifecycle_hook",
-    "notes": "Emit meta tag with collection type + entry ID and Strapi admin URL.",
-    "guide_path": "guides/strapi.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head (SSR/templating) once you know which entry rendered the page.\n**How to build `editorUrl`:** Emit the collection type and entry ID used for rendering; admin host may differ from public host.\n**Common editor URL pattern(s):** https://{ADMIN_HOST}/admin/content-manager/collectionType/api::{API_NAME}.{TYPE}/{ENTRY_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/strapi.md",
+    "notes_original": "Emit meta tag with collection type + entry ID and Strapi admin URL.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{ADMIN_HOST}/admin/content-manager/collectionType/api::{API_NAME}.{TYPE}/{ENTRY_ID}"
+      ],
+      "id_source_hint": "Emit the collection type and entry ID used for rendering; admin host may differ from public host.",
+      "where_to_inject": "Frontend head (SSR/templating) once you know which entry rendered the page."
+    }
   },
   {
     "slug": "contentstack",
@@ -304,8 +527,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Use a per-page silktide-cms meta tag to provide the exact editor URL for each page.",
-    "guide_path": "guides/contentstack.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head in your site/app.\n**How to build `editorUrl`:** Emit stack UID + content type UID + entry UID used for the page.\n**Common editor URL pattern(s):** https://app.contentstack.com/#!/stack/{STACK_UID}/content-types/{CT_UID}/entries/{ENTRY_UID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/contentstack.md",
+    "notes_original": "Use a per-page silktide-cms meta tag to provide the exact editor URL for each page.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://app.contentstack.com/#!/stack/{STACK_UID}/content-types/{CT_UID}/entries/{ENTRY_UID}"
+      ],
+      "id_source_hint": "Emit stack UID + content type UID + entry UID used for the page.",
+      "where_to_inject": "Frontend head in your site/app."
+    }
   },
   {
     "slug": "ghost",
@@ -314,8 +547,15 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "webhook",
-    "notes": "Ghost supports a front-end \u201c/edit\u201d shortcut: append /edit to the public post/page URL to redirect to the editor (login required).",
-    "guide_path": "guides/ghost.md"
+    "notes": "**Deep-link approach:** URL transform (Silktide derives the editor URL by manipulating the public URL).\n**Transform rule:** Append `/edit` to the public URL path (e.g., `https://site.com/post` → `https://site.com/post/edit`).\n**Notes:** Requires the user to be logged in; Ghost may redirect to login first.\n**When to use meta tag instead:** If the CMS editor URL requires internal IDs (e.g., pageId/itemId) that are not present in the public URL.",
+    "guide_path": "guides/ghost.md",
+    "notes_original": "Ghost supports a front-end “/edit” shortcut: append /edit to the public post/page URL to redirect to the editor (login required).",
+    "editor_context": {
+      "strategy": "url_transform",
+      "silktide_support": "custom",
+      "transform_rule": "Append `/edit` to the public URL path (e.g., `https://site.com/post` → `https://site.com/post/edit`).",
+      "limitations": "Requires the user to be logged in; Ghost may redirect to login first."
+    }
   },
   {
     "slug": "woocommerce",
@@ -325,8 +565,14 @@
     "silktide_help_url": "https://help.silktide.com/en/articles/8117667-how-to-integrate-silktide-with-wordpress",
     "edit_link_strategy": "built_in",
     "retest_strategy": "built_in",
-    "notes": "Silktide provides a built-in integration for deep-linking (Edit button).",
-    "guide_path": "guides/woocommerce.md"
+    "notes": "**Deep-link support:** Built-in (Silktide handles the Edit button).\n**What to do:** Follow the Silktide integration guide in `silktide_help_url`.\n**Editor experience:** Users click **Edit** in Silktide and are taken to the correct item in the CMS.",
+    "guide_path": "guides/woocommerce.md",
+    "notes_original": "Silktide provides a built-in integration for deep-linking (Edit button).",
+    "editor_context": {
+      "strategy": "built_in",
+      "silktide_support": "built_in",
+      "primary_docs": "https://help.silktide.com/en/articles/8117667-how-to-integrate-silktide-with-wordpress"
+    }
   },
   {
     "slug": "prestashop",
@@ -335,8 +581,19 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Admin edit URLs typically require internal IDs (product/category/CMS page).",
-    "guide_path": "guides/prestashop.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Theme header template with per-page variables.\n**How to build `editorUrl`:** Use internal IDs (product ID, CMS page ID). Avoid any security tokens in the URL.\n**Common editor URL pattern(s):** https://{SITE}/admin*/index.php?controller=AdminProducts&id_product={PRODUCT_ID}&updateproduct=1; https://{SITE}/admin*/index.php?controller=AdminCmsContent&id_cms={CMS_PAGE_ID}&updatecms=1 (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/prestashop.md",
+    "notes_original": "Admin edit URLs typically require internal IDs (product/category/CMS page).",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/admin*/index.php?controller=AdminProducts&id_product={PRODUCT_ID}&updateproduct=1",
+        "https://{SITE}/admin*/index.php?controller=AdminCmsContent&id_cms={CMS_PAGE_ID}&updatecms=1"
+      ],
+      "id_source_hint": "Use internal IDs (product ID, CMS page ID). Avoid any security tokens in the URL.",
+      "where_to_inject": "Theme header template with per-page variables."
+    }
   },
   {
     "slug": "shopware",
@@ -345,8 +602,19 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Admin edit URLs usually include entity IDs; public slugs aren\u2019t enough.",
-    "guide_path": "guides/shopware.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Storefront head; requires access to entity IDs in template context.\n**How to build `editorUrl`:** Use Shopware entity IDs (often UUIDs) for products/categories/pages.\n**Common editor URL pattern(s):** https://{ADMIN_HOST}/admin#/sw/product/detail/{PRODUCT_ID}; https://{ADMIN_HOST}/admin#/sw/category/detail/{CATEGORY_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/shopware.md",
+    "notes_original": "Admin edit URLs usually include entity IDs; public slugs aren’t enough.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{ADMIN_HOST}/admin#/sw/product/detail/{PRODUCT_ID}",
+        "https://{ADMIN_HOST}/admin#/sw/category/detail/{CATEGORY_ID}"
+      ],
+      "id_source_hint": "Use Shopware entity IDs (often UUIDs) for products/categories/pages.",
+      "where_to_inject": "Storefront head; requires access to entity IDs in template context."
+    }
   },
   {
     "slug": "plone",
@@ -355,8 +623,15 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "event_handler",
-    "notes": "Plone supports action URLs like /edit on the same content URL, so editorUrl can be derived from the public URL.",
-    "guide_path": "guides/plone.md"
+    "notes": "**Deep-link approach:** URL transform (Silktide derives the editor URL by manipulating the public URL).\n**Transform rule:** Append `/edit` to the public URL (e.g., `https://site.com/page` → `https://site.com/page/edit`).\n**Notes:** Requires editor permissions; some sites may customize actions/paths.\n**When to use meta tag instead:** If the CMS editor URL requires internal IDs (e.g., pageId/itemId) that are not present in the public URL.",
+    "guide_path": "guides/plone.md",
+    "notes_original": "Plone supports action URLs like /edit on the same content URL, so editorUrl can be derived from the public URL.",
+    "editor_context": {
+      "strategy": "url_transform",
+      "silktide_support": "custom",
+      "transform_rule": "Append `/edit` to the public URL (e.g., `https://site.com/page` → `https://site.com/page/edit`).",
+      "limitations": "Requires editor permissions; some sites may customize actions/paths."
+    }
   },
   {
     "slug": "django_cms",
@@ -365,8 +640,15 @@
     "silktide_support": "custom",
     "edit_link_strategy": "url_transform",
     "retest_strategy": "event_handler",
-    "notes": "Many setups allow entering edit mode by appending ?edit to the current page URL (logged-in editors).",
-    "guide_path": "guides/django_cms.md"
+    "notes": "**Deep-link approach:** URL transform (Silktide derives the editor URL by manipulating the public URL).\n**Transform rule:** If the toolbar edit mode is enabled, use an edit-mode flag such as `?edit` (implementation-specific).\n**Notes:** Depends on django CMS toolbar configuration; if uncertain, treat as 'depends' and fall back to meta tag.\n**When to use meta tag instead:** If the CMS editor URL requires internal IDs (e.g., pageId/itemId) that are not present in the public URL.",
+    "guide_path": "guides/django_cms.md",
+    "notes_original": "Many setups allow entering edit mode by appending ?edit to the current page URL (logged-in editors).",
+    "editor_context": {
+      "strategy": "url_transform",
+      "silktide_support": "custom",
+      "transform_rule": "If the toolbar edit mode is enabled, use an edit-mode flag such as `?edit` (implementation-specific).",
+      "limitations": "Depends on django CMS toolbar configuration; if uncertain, treat as 'depends' and fall back to meta tag."
+    }
   },
   {
     "slug": "modx",
@@ -375,8 +657,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Manager edit URLs are resource-ID based; public slugs don\u2019t reliably include IDs.",
-    "guide_path": "guides/modx.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Template head via placeholders/snippets.\n**How to build `editorUrl`:** MODX resources have numeric IDs; emit the current resource ID.\n**Common editor URL pattern(s):** https://{SITE}/manager/?a=resource/update&id={RESOURCE_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/modx.md",
+    "notes_original": "Manager edit URLs are resource-ID based; public slugs don’t reliably include IDs.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/manager/?a=resource/update&id={RESOURCE_ID}"
+      ],
+      "id_source_hint": "MODX resources have numeric IDs; emit the current resource ID.",
+      "where_to_inject": "Template head via placeholders/snippets."
+    }
   },
   {
     "slug": "silverstripe",
@@ -385,8 +677,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Admin edit routes are ID-based (pages/records).",
-    "guide_path": "guides/silverstripe.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Theme layout head (or controller) where page ID is available.\n**How to build `editorUrl`:** Emit the page record ID used by Silverstripe.\n**Common editor URL pattern(s):** https://{SITE}/admin/pages/edit/show/{PAGE_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/silverstripe.md",
+    "notes_original": "Admin edit routes are ID-based (pages/records).",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/admin/pages/edit/show/{PAGE_ID}"
+      ],
+      "id_source_hint": "Emit the page record ID used by Silverstripe.",
+      "where_to_inject": "Theme layout head (or controller) where page ID is available."
+    }
   },
   {
     "slug": "concretecms",
@@ -395,8 +697,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "depends",
     "retest_strategy": "event_handler",
-    "notes": "Some sites use on-page editing (same URL for editors), others route through dashboard pages with cID. If you can reliably derive edit mode from public URL, use transform; otherwise meta tag with page ID.",
-    "guide_path": "guides/concretecms.md"
+    "notes": "**Deep-link approach:** Depends (URL transform may work in some setups; meta tag is the safe default).\n**Decision rule:** If you can deterministically map the public URL to an editor URL without internal IDs, use URL transform. Otherwise use the meta tag.\n**Context:** Some sites use on-page editing (same URL for editors), others route through dashboard pages with cID. If you can reliably derive edit mode from public URL, use transform; otherwise meta tag with page ID.",
+    "guide_path": "guides/concretecms.md",
+    "notes_original": "Some sites use on-page editing (same URL for editors), others route through dashboard pages with cID. If you can reliably derive edit mode from public URL, use transform; otherwise meta tag with page ID.",
+    "editor_context": {
+      "strategy": "depends",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "processwire",
@@ -405,8 +712,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Admin edit URLs require the page ID; public URL is path-based.",
-    "guide_path": "guides/processwire.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Main layout/head template.\n**How to build `editorUrl`:** Emit the ProcessWire page id ($page->id).\n**Common editor URL pattern(s):** https://{SITE}/admin/page/edit/?id={PAGE_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/processwire.md",
+    "notes_original": "Admin edit URLs require the page ID; public URL is path-based.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{SITE}/admin/page/edit/?id={PAGE_ID}"
+      ],
+      "id_source_hint": "Emit the ProcessWire page id ($page->id).",
+      "where_to_inject": "Main layout/head template."
+    }
   },
   {
     "slug": "octobercms",
@@ -415,8 +732,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Back-end editing is record-ID based and front-end URLs are developer-defined.",
-    "guide_path": "guides/octobercms.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** In the global frontend `<head>` so every page emits a `silktide-cms` meta tag.\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/octobercms.md",
+    "notes_original": "Back-end editing is record-ID based and front-end URLs are developer-defined.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "statamic",
@@ -425,8 +747,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "depends",
     "retest_strategy": "event_handler",
-    "notes": "Entry editing URLs in the Control Panel depend on collection/blueprint structure. If your public paths map cleanly to CP entry routes, use transform; otherwise generate editorUrl in meta tag from entry identifiers.",
-    "guide_path": "guides/statamic.md"
+    "notes": "**Deep-link approach:** Depends (URL transform may work in some setups; meta tag is the safe default).\n**Decision rule:** If you can deterministically map the public URL to an editor URL without internal IDs, use URL transform. Otherwise use the meta tag.\n**Context:** Entry editing URLs in the Control Panel depend on collection/blueprint structure. If your public paths map cleanly to CP entry routes, use transform; otherwise generate editorUrl in meta tag from entry identifiers.",
+    "guide_path": "guides/statamic.md",
+    "notes_original": "Entry editing URLs in the Control Panel depend on collection/blueprint structure. If your public paths map cleanly to CP entry routes, use transform; otherwise generate editorUrl in meta tag from entry identifiers.",
+    "editor_context": {
+      "strategy": "depends",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "directus",
@@ -435,8 +762,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Editor UI is collection + item-ID based; public URLs are app-specific.",
-    "guide_path": "guides/directus.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head.\n**How to build `editorUrl`:** Emit collection name + item ID used for the page.\n**Common editor URL pattern(s):** https://{ADMIN_HOST}/admin/content/{COLLECTION}/{ITEM_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/directus.md",
+    "notes_original": "Editor UI is collection + item-ID based; public URLs are app-specific.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{ADMIN_HOST}/admin/content/{COLLECTION}/{ITEM_ID}"
+      ],
+      "id_source_hint": "Emit collection name + item ID used for the page.",
+      "where_to_inject": "Frontend head."
+    }
   },
   {
     "slug": "datocms",
@@ -445,8 +782,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Editor URLs are model/item-ID based and not derivable from public slugs.",
-    "guide_path": "guides/datocms.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head.\n**How to build `editorUrl`:** Emit Dato model/item IDs from the CMS payload.\n**Common editor URL pattern(s):** https://{ADMIN_HOST}/admin/item_types/{MODEL_ID}/items/{ITEM_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/datocms.md",
+    "notes_original": "Editor URLs are model/item-ID based and not derivable from public slugs.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://{ADMIN_HOST}/admin/item_types/{MODEL_ID}/items/{ITEM_ID}"
+      ],
+      "id_source_hint": "Emit Dato model/item IDs from the CMS payload.",
+      "where_to_inject": "Frontend head."
+    }
   },
   {
     "slug": "kontent_ai",
@@ -455,8 +802,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Editor URLs use internal item IDs/codenames; public URL mapping is custom.",
-    "guide_path": "guides/kontent_ai.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head.\n**How to build `editorUrl`:** Emit project ID + item ID (or codename) used for the page.\n**Common editor URL pattern(s):** https://app.kontent.ai/{PROJECT_ID}/content-inventory/{ITEM_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/kontent_ai.md",
+    "notes_original": "Editor URLs use internal item IDs/codenames; public URL mapping is custom.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://app.kontent.ai/{PROJECT_ID}/content-inventory/{ITEM_ID}"
+      ],
+      "id_source_hint": "Emit project ID + item ID (or codename) used for the page.",
+      "where_to_inject": "Frontend head."
+    }
   },
   {
     "slug": "hygraph",
@@ -465,8 +822,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Editor is model + entry-ID based; public URLs are app-defined.",
-    "guide_path": "guides/hygraph.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head.\n**How to build `editorUrl`:** Emit model + entry ID; project slug is customer-specific.\n**Common editor URL pattern(s):** https://app.hygraph.com/{PROJECT_SLUG}/content/{MODEL}/{ENTRY_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/hygraph.md",
+    "notes_original": "Editor is model + entry-ID based; public URLs are app-defined.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://app.hygraph.com/{PROJECT_SLUG}/content/{MODEL}/{ENTRY_ID}"
+      ],
+      "id_source_hint": "Emit model + entry ID; project slug is customer-specific.",
+      "where_to_inject": "Frontend head."
+    }
   },
   {
     "slug": "builderio",
@@ -475,8 +842,18 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Editing happens inside Builder with content IDs/spaces; public URLs are typically mapped via model/URL fields.",
-    "guide_path": "guides/builderio.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** Frontend head.\n**How to build `editorUrl`:** Emit Builder content ID (and model if applicable).\n**Common editor URL pattern(s):** https://builder.io/content/{MODEL}/{CONTENT_ID} (varies by instance).\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/builderio.md",
+    "notes_original": "Editing happens inside Builder with content IDs/spaces; public URLs are typically mapped via model/URL fields.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom",
+      "editor_url_common_patterns": [
+        "https://builder.io/content/{MODEL}/{CONTENT_ID}"
+      ],
+      "id_source_hint": "Emit Builder content ID (and model if applicable).",
+      "where_to_inject": "Frontend head."
+    }
   },
   {
     "slug": "brightspot",
@@ -485,8 +862,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Authoring is ID-based and implementation-specific; public URLs don\u2019t reliably encode item IDs.",
-    "guide_path": "guides/brightspot.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** In the global frontend `<head>` so every page emits a `silktide-cms` meta tag.\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/brightspot.md",
+    "notes_original": "Authoring is ID-based and implementation-specific; public URLs don’t reliably encode item IDs.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "crownpeak",
@@ -495,8 +877,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "webhook",
-    "notes": "Authoring UI uses internal asset IDs; public URL mapping varies.",
-    "guide_path": "guides/crownpeak.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** In the global frontend `<head>` so every page emits a `silktide-cms` meta tag.\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/crownpeak.md",
+    "notes_original": "Authoring UI uses internal asset IDs; public URL mapping varies.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "tridion_sites",
@@ -505,8 +892,13 @@
     "silktide_support": "custom",
     "edit_link_strategy": "meta_tag",
     "retest_strategy": "event_handler",
-    "notes": "Editing is ID-based (items/components/pages) and not derivable from public URLs.",
-    "guide_path": "guides/tridion_sites.md"
+    "notes": "**Deep-link approach:** Meta tag (each page outputs its own editor URL).\n**Why:** The CMS editor URL typically needs internal IDs/UUIDs that cannot be derived from the public URL alone.\n**Where to implement:** In the global frontend `<head>` so every page emits a `silktide-cms` meta tag.\n**Security:** Do not include tokens/session keys in the editorUrl (Base64 is reversible).",
+    "guide_path": "guides/tridion_sites.md",
+    "notes_original": "Editing is ID-based (items/components/pages) and not derivable from public URLs.",
+    "editor_context": {
+      "strategy": "meta_tag",
+      "silktide_support": "custom"
+    }
   },
   {
     "slug": "hcl_dx",
@@ -515,7 +907,12 @@
     "silktide_support": "custom",
     "edit_link_strategy": "depends",
     "retest_strategy": "event_handler",
-    "notes": "Some deployments support in-context editing on the live URL; others require control panel routes with internal IDs. If edit mode can be enabled via URL parameters, use transform; otherwise generate editorUrl via meta tag using internal IDs.",
-    "guide_path": "guides/hcl_dx.md"
+    "notes": "**Deep-link approach:** Depends (URL transform may work in some setups; meta tag is the safe default).\n**Decision rule:** If you can deterministically map the public URL to an editor URL without internal IDs, use URL transform. Otherwise use the meta tag.\n**Context:** Some deployments support in-context editing on the live URL; others require control panel routes with internal IDs. If edit mode can be enabled via URL parameters, use transform; otherwise generate editorUrl via meta tag using internal IDs.",
+    "guide_path": "guides/hcl_dx.md",
+    "notes_original": "Some deployments support in-context editing on the live URL; others require control panel routes with internal IDs. If edit mode can be enabled via URL parameters, use transform; otherwise generate editorUrl via meta tag using internal IDs.",
+    "editor_context": {
+      "strategy": "depends",
+      "silktide_support": "custom"
+    }
   }
 ]
