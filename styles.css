@@ -87,23 +87,10 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .pill.meta_tag{border-color:var(--pill-meta);color:var(--text)}
 .pill.depends{border-color:var(--pill-dep);color:var(--text)}
 .pill.not_feasible{border-color:var(--pill-none);color:var(--text)}
-.main{display:block;padding-top:18px}
+.main{display:grid;grid-template-columns:380px 1fr;gap:18px;align-items:start;padding-top:18px}
+@media (max-width: 980px){.main{grid-template-columns:1fr}}
 .list{position:static}
 .cards{display:flex;flex-direction:column;gap:16px}
-.cardRow{
-  display:grid;
-  grid-template-columns:minmax(280px, 360px) minmax(0, 1fr);
-  gap:16px;
-  align-items:start;
-}
-.cardRow > .card{grid-column:1 / -1}
-.cardRow.activeRow > .card{grid-column:1}
-.cardRow.activeRow > .inlineDetail{grid-column:2}
-@media (max-width: 980px){
-  .cardRow{grid-template-columns:1fr}
-  .cardRow > .card{grid-column:1}
-  .cardRow.activeRow > .inlineDetail{grid-column:1}
-}
 .card{
   border:1px solid var(--border);
   border-radius:18px;
@@ -142,36 +129,17 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .badge.meta_tag{border-color:var(--pill-meta)}
 .badge.depends{border-color:var(--pill-dep)}
 .badge.not_feasible{border-color:var(--pill-none)}
-.inlineDetail{
-  border:1px solid var(--border);
-  border-radius:18px;
-  background:linear-gradient(160deg,var(--surface),var(--surface-3));
-  padding:16px;
-  box-shadow:var(--shadow);
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-.inlineHeader{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-  align-items:center;
-  border-bottom:1px solid var(--border);
-  padding-bottom:12px;
-  margin-bottom:12px;
-}
-.inlineActions{display:flex;gap:8px;flex-wrap:wrap}
-.button.small{
-  padding:8px 12px;
-  font-size:12px;
-}
 .detail{
   border:1px solid var(--border);
   border-radius:18px;
   background:linear-gradient(160deg,var(--surface),var(--surface-3));
   padding:18px;
   box-shadow:var(--shadow);
+  position:sticky;
+  top:16px;
+  align-self:start;
+  max-height:calc(100vh - 32px);
+  overflow:auto;
 }
 .detailHeader{
   display:flex;
@@ -232,4 +200,15 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
 .markdown pre code{background:transparent;padding:0}
 html[data-theme="dark"] .markdown pre{background:#0b1426}
 .footer{padding:18px 0}
-.detail{display:none}
+#detailBody{
+  max-height:0;
+  opacity:0;
+  transform:translateY(8px);
+  overflow:hidden;
+  transition:max-height .28s ease, opacity .2s ease, transform .2s ease;
+}
+.detail.is-open #detailBody{
+  max-height:9999px;
+  opacity:1;
+  transform:translateY(0);
+}
