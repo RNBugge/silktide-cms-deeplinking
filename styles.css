@@ -135,11 +135,7 @@ h1{margin:0 0 8px 0;font-size:28px;font-family:"Sora",ui-sans-serif,system-ui;le
   background:linear-gradient(160deg,var(--surface),var(--surface-3));
   padding:18px;
   box-shadow:var(--shadow);
-  position:sticky;
-  top:16px;
   align-self:start;
-  max-height:calc(100vh - 32px);
-  overflow:auto;
 }
 .detailHeader{
   display:flex;
