@@ -56,6 +56,37 @@ function getTemplate(c){
   return buildSummary(c);
 }
 
+function buildInlineDetail(c){
+  const editStrategy = c.edit_link_strategy || "not_feasible";
+  const template = getTemplate(c);
+  return `
+    <div class="inlineHeader">
+      <div class="meta">
+        <span class="badge ${badgeClass(editStrategy)}">${labelize(editStrategy)}</span>
+        <span class="badge">${labelize(c.silktide_support)}</span>
+        ${c.retest_strategy ? `<span class="badge">${labelize(c.retest_strategy)}</span>` : ""}
+      </div>
+      <div class="inlineActions">
+        <button class="button small" type="button" data-action="copy-md">Copy template</button>
+        <button class="button secondary small" type="button" data-action="copy-json">Copy JSON</button>
+      </div>
+    </div>
+    <div class="markdown">${renderMarkdown(template)}</div>
+  `;
+}
+
+async function copyText(text, button){
+  if(!text) return;
+  try{
+    await navigator.clipboard.writeText(text);
+    const old = button.textContent;
+    button.textContent = "Copied!";
+    setTimeout(()=> button.textContent = old, 900);
+  }catch(e){
+    alert("Copy failed. Select the text manually.");
+  }
+}
+
 function applyTheme(theme){
   const root = document.documentElement;
   if(theme === "dark"){
@@ -103,8 +134,12 @@ function renderList(){
 
   filtered.forEach(c => {
     const editStrategy = c.edit_link_strategy || "not_feasible";
+    const row = document.createElement("div");
+    const isActive = active && active.slug === c.slug;
+    row.className = "cardRow" + (isActive ? " activeRow" : "");
+
     const card = document.createElement("div");
-    card.className = "card" + (active && active.slug === c.slug ? " active" : "");
+    card.className = "card" + (isActive ? " active" : "");
     const editorText = editorContextText(c.editor_context);
     const tooltip = editorText || c.notes || "";
     card.innerHTML = `
@@ -119,7 +154,32 @@ function renderList(){
       ${tooltip ? `<div class="tooltip" title="${tooltip.replaceAll('"',"&quot;")}">More detail</div>` : ""}
     `;
     card.addEventListener("click", () => selectCMS(c));
-    list.appendChild(card);
+    row.appendChild(card);
+
+    if(isActive){
+      const detail = document.createElement("div");
+      detail.className = "inlineDetail";
+      detail.innerHTML = buildInlineDetail(c);
+
+      const btnMd = detail.querySelector('[data-action="copy-md"]');
+      const btnJson = detail.querySelector('[data-action="copy-json"]');
+      if(btnMd){
+        btnMd.addEventListener("click", (e) => {
+          e.stopPropagation();
+          copyText(getTemplate(c), btnMd);
+        });
+      }
+      if(btnJson){
+        btnJson.addEventListener("click", (e) => {
+          e.stopPropagation();
+          copyText(JSON.stringify(c, null, 2), btnJson);
+        });
+      }
+
+      row.appendChild(detail);
+    }
+
+    list.appendChild(row);
   });
 }
 
@@ -163,28 +223,12 @@ function bind(){
 
   $("copyMd").addEventListener("click", async () => {
     if(!activeMarkdown) return;
-    try{
-      await navigator.clipboard.writeText(activeMarkdown);
-      const btn = $("copyMd");
-      const old = btn.textContent;
-      btn.textContent = "Copied!";
-      setTimeout(()=> btn.textContent = old, 900);
-    }catch(e){
-      alert("Copy failed. Select the text manually from the template.");
-    }
+    await copyText(activeMarkdown, $("copyMd"));
   });
 
   $("copyJson").addEventListener("click", async () => {
     if(!active) return;
-    try{
-      await navigator.clipboard.writeText(JSON.stringify(active, null, 2));
-      const btn = $("copyJson");
-      const old = btn.textContent;
-      btn.textContent = "Copied!";
-      setTimeout(()=> btn.textContent = old, 900);
-    }catch(e){
-      alert("Copy failed. Select the data manually.");
-    }
+    await copyText(JSON.stringify(active, null, 2), $("copyJson"));
   });
 }
 
